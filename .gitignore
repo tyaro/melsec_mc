@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Ignore node_modules under the GUI frontend
+melsec_mc_mock_gui/node_modules/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
