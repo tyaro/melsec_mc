@@ -1,5 +1,5 @@
 [package]
-name = "melsec_mc_gui"
+name = "melsec_mc_mock_gui"
 version = "0.1.0"
 edition = "2021"
 authors = ["tyaro"]

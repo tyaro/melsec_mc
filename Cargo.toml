@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = [
+    "melsec_mc",
+    "melsec_mc_mock",
+    "melsec_mc_mock_gui",
+]
