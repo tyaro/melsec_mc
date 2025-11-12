@@ -30,6 +30,63 @@ echo "=== push-trace started: $(date -u) ===" >> "$PUSH_TRACE"
 
 echo "DEBUG: current dir: $(pwd)" >> "$PUSH_TRACE"
 
+# helper: create or update PR on target repo
+create_or_update_pr() {
+  if [ "${DRY_RUN}" = "1" ]; then
+    echo "DRY_RUN=1: skipping PR create/update" | tee -a "$PUSH_TRACE"
+    return
+  fi
+
+  OWNER="tyaro"
+  REPO="melsec_mc"
+  HEAD_BRANCH="${BRANCH}"
+  BASE="main"
+  TITLE="sync: update melsec_mc from tyaro/melsec_com ${GITHUB_SHA}"
+  BODY="Automated sync from tyaro/melsec_com (${GITHUB_SHA}). See push-trace for details."
+
+  echo "Checking for existing PR (head=${OWNER}:${HEAD_BRANCH}, base=${BASE})" | tee -a "$PUSH_TRACE"
+
+  if command -v jq >/dev/null 2>&1; then
+    existing_pr=$(curl -sS -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+      "https://api.github.com/repos/${OWNER}/${REPO}/pulls?head=${OWNER}:${HEAD_BRANCH}&base=${BASE}&state=open" | jq -r '.[0].number // empty') || true
+  else
+    existing_pr=$(curl -sS -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+      "https://api.github.com/repos/${OWNER}/${REPO}/pulls?head=${OWNER}:${HEAD_BRANCH}&base=${BASE}&state=open" | grep -o '"number": [0-9]*' | head -1 | grep -o '[0-9]*' || true)
+  fi
+
+  if [ -n "$existing_pr" ]; then
+    echo "Found existing PR #$existing_pr — updating title/body" | tee -a "$PUSH_TRACE"
+    if command -v jq >/dev/null 2>&1; then
+      curl -sS -X PATCH -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+        "https://api.github.com/repos/${OWNER}/${REPO}/pulls/${existing_pr}" \
+        -d "$(jq -n --arg t "$TITLE" --arg b "$BODY" '{title:$t, body:$b}')" | tee -a "$PUSH_TRACE" || true
+    else
+      curl -sS -X PATCH -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+        "https://api.github.com/repos/${OWNER}/${REPO}/pulls/${existing_pr}" \
+        -d "{\"title\": \"${TITLE}\", \"body\": \"${BODY}\"}" | tee -a "$PUSH_TRACE" || true
+    fi
+    echo "PR_NUMBER=${existing_pr}" >> "$GITHUB_OUTPUT" || true
+  else
+    echo "No existing PR — creating new PR ${HEAD_BRANCH} -> ${BASE}" | tee -a "$PUSH_TRACE"
+    if command -v jq >/dev/null 2>&1; then
+      pr_json=$(curl -sS -X POST -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+        "https://api.github.com/repos/${OWNER}/${REPO}/pulls" \
+        -d "$(jq -n --arg t "$TITLE" --arg b "$BODY" --arg head "${OWNER}:${HEAD_BRANCH}" --arg base "$BASE" '{title:$t, body:$b, head:$head, base:$base}')") || true
+      pr_url=$(echo "$pr_json" | jq -r '.html_url // empty' || true)
+      pr_num=$(echo "$pr_json" | jq -r '.number // empty' || true)
+    else
+      pr_json=$(curl -sS -X POST -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+        "https://api.github.com/repos/${OWNER}/${REPO}/pulls" \
+        -d "{\"title\": \"${TITLE}\", \"body\": \"${BODY}\", \"head\": \"${OWNER}:${HEAD_BRANCH}\", \"base\": \"${BASE}\"}") || true
+      pr_url=$(echo "$pr_json" | grep -o '"html_url": *"[^"]*"' | head -1 | sed -E 's/"html_url": *"([^"]*)"/\1/' || true)
+      pr_num=$(echo "$pr_json" | grep -o '"number": *[0-9]*' | head -1 | grep -o '[0-9]*' || true)
+    fi
+    echo "Created PR #${pr_num}: ${pr_url}" | tee -a "$PUSH_TRACE"
+    [ -n "$pr_url" ] && echo "PR_URL=${pr_url}" >> "$GITHUB_OUTPUT" || true
+    [ -n "$pr_num" ] && echo "PR_NUMBER=${pr_num}" >> "$GITHUB_OUTPUT" || true
+  fi
+}
+
 # ensure source checkout one level up is not shallow
 if git -C .. rev-parse --is-shallow-repository >/dev/null 2>&1; then
   IS_SHALLOW=$(git -C .. rev-parse --is-shallow-repository || true)
@@ -74,9 +131,11 @@ if [ -n "$(git status --porcelain)" ]; then
       GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \
         git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force-with-lease 2>&1 | tee -a 
 "$PUSH_TRACE"
-        if [ ${PIPESTATUS[0]} -eq 0 ]; then
-        echo "push succeeded" | tee -a "$PUSH_TRACE"
-        break
+  if [ ${PIPESTATUS[0]} -eq 0 ]; then
+  echo "push succeeded" | tee -a "$PUSH_TRACE"
+  # create or update PR after successful push
+  create_or_update_pr || true
+  break
       else
         echo "push failed, retrying ($i)" | tee -a "$PUSH_TRACE"
         sleep 30
@@ -96,8 +155,10 @@ else
     GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \
       git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force-with-lease 2>&1 | tee -a "$PUSH_TRACE"
         if [ ${PIPESTATUS[0]} -eq 0 ]; then
-      echo "push (forced) succeeded or branch exists" | tee -a "$PUSH_TRACE"
-      break
+          echo "push (forced) succeeded or branch exists" | tee -a "$PUSH_TRACE"
+          # ensure PR exists for the branch
+          create_or_update_pr || true
+          break
     else
       echo "push failed, retrying ($i)" | tee -a "$PUSH_TRACE"
       sleep 30
