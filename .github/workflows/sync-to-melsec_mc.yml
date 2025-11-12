@@ -89,10 +89,11 @@ jobs:
             # ensure we don't mask failures with '|| true' and use same backoff
             for i in 1 2 3 4 5; do
               # capture detailed git traces to push-trace.log for debugging
+              # force the push to ensure the sync branch on target is overwritten
               GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \
-                git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} 2>&1 | tee -a push-trace.log
+                git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force 2>&1 | tee -a push-trace.log
               if [ ${PIPESTATUS[0]} -eq 0 ]; then
-                echo "push (no-op) succeeded or branch exists"
+                echo "push (forced) succeeded or branch exists"
                 break
               else
                 echo "push failed, retrying ($i)"
