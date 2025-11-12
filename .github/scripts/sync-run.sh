@@ -159,6 +159,10 @@ fi
 if [ -n "$(git status --porcelain)" ]; then
   echo "DEBUG: detected changes to commit" >> "$PUSH_TRACE"
   git add . 2>&1 | tee -a "$PUSH_TRACE" || true
+  # ensure commit identity is set in the cloned target repo
+  echo "DEBUG: configuring git user identity for commit" | tee -a "$PUSH_TRACE"
+  git config user.name "github-actions[bot]" 2>&1 | tee -a "$PUSH_TRACE" || true
+  git config user.email "41898282+github-actions[bot]@users.noreply.github.com" 2>&1 | tee -a "$PUSH_TRACE" || true
   echo "ABOUT TO COMMIT" | tee -a "$PUSH_TRACE"
   # commit safely even when GITHUB_SHA is unset
   set +e
@@ -178,9 +182,12 @@ if [ -n "$(git status --porcelain)" ]; then
       sleep 1
       break
     else
+      set +e
       GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \
         git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force-with-lease 2>&1 | tee -a "$PUSH_TRACE"
-      if [ ${PIPESTATUS[0]} -eq 0 ]; then
+      push_status=${PIPESTATUS[0]:-1}
+      set -e
+      if [ ${push_status} -eq 0 ]; then
         echo "push succeeded" | tee -a "$PUSH_TRACE"
         # Extra diagnostics before attempting PR creation
         echo "DEBUG: about to call create_or_update_pr (post-push)" | tee -a "$PUSH_TRACE"
@@ -213,9 +220,12 @@ else
   git config --local --unset-all http.https://github.com/.extraheader || true
   git config --local --unset-all credential.helper || true
   for i in 1 2 3 4 5; do
+    set +e
     GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \
       git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force-with-lease 2>&1 | tee -a "$PUSH_TRACE"
-    if [ ${PIPESTATUS[0]} -eq 0 ]; then
+    push_status=${PIPESTATUS[0]:-1}
+    set -e
+    if [ ${push_status} -eq 0 ]; then
       echo "push (forced) succeeded or branch exists" | tee -a "$PUSH_TRACE"
       echo "DEBUG: about to call create_or_update_pr (branch-exists path)" | tee -a "$PUSH_TRACE"
       echo "DEBUG: gh exists: $(command -v gh || echo 'no')" | tee -a "$PUSH_TRACE"
