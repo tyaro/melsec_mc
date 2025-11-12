@@ -1,0 +1,1 @@
+["\\\\?\\C:\\Users\\tsurumi\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\scripts\\bundle.global.js","\\\\?\\C:\\Users\\tsurumi\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-plugin-opener-2.5.2\\api-iife.js"]
