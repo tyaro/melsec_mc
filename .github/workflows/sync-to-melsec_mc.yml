@@ -5,6 +5,12 @@ on:
     branches: [ main ]
     paths:
       - 'melsec_mc/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Set to 1 to run in DRY_RUN mode (skip push/PR). Defaults to 1 for dispatch.'
+        required: false
+        default: '1'
 
 jobs:
   sync:
@@ -14,8 +20,8 @@ jobs:
       contents: write
     env:
       SYNC_PAT: ${{ secrets.SYNC_PAT }}
-      # default to dry-run for non-main branches when run elsewhere; main executes real sync
-      DRY_RUN: ${{ github.ref == 'refs/heads/main' && '0' || '1' }}
+      # If manually dispatched, prefer the dispatch input; otherwise fall back to previous branch logic
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || (github.ref == 'refs/heads/main' && '0' || '1') }}
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
