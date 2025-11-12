@@ -1,0 +1,4 @@
+ghp_[A-Za-z0-9_]+==>REDACTED
+ghs_[A-Za-z0-9_]+==>REDACTED
+x-access-token: [A-Za-z0-9_\-\.]+==>REDACTED
+SYNC_PAT==>REDACTED

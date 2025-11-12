@@ -1,12 +1,6 @@
-
 target/
 **/target/
-*.log
-*.bak
-.github/artifacts/
-push-trace*
-target/
-**/target/
+node_modules/
 *.log
 *.bak
 .github/artifacts/

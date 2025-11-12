@@ -1,0 +1,11 @@
+.github/artifacts/
+.github/artifacts/**
+artifacts/
+artifacts/**
+**/push-trace*
+**/push-trace.log*
+**/*.bak
+**/*.log
+*.log
+*.bak
+.gitignore

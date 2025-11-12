@@ -8,6 +8,9 @@ logs/*
 # VS Code
 .vscode/
 
+# Node
+node_modules/
+
 # Local release and CI artifacts
 /release_artifacts/
 /ci_artifacts_*/
