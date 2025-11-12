@@ -5,3 +5,9 @@ target/
 *.bak
 .github/artifacts/
 push-trace*
+target/
+**/target/
+*.log
+*.bak
+.github/artifacts/
+push-trace*
