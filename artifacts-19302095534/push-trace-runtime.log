@@ -1,0 +1,1002 @@
+=== push-trace started: Wed Nov 12 15:09:57 UTC 2025 ===
+DEBUG: current dir: /home/runner/work/melsec_com/melsec_com/target
+DEBUG: created PUSH_TRACE at /home/runner/work/_temp/push-trace-eKeIOU.log
+DEBUG: completed rsync, current dir /home/runner/work/melsec_com/melsec_com/target
+DEBUG: running git status (porcelain) and listing changed files
+ M .github/scripts/sync-run.sh
+DEBUG: UNTRACKED=[]
+DEBUG: detected changes to commit
+The following paths are ignored by one of your .gitignore files:
+target
+hint: Use -f if you really want to add them.
+hint: Disable this message with "git config set advice.addIgnoredFile false"
+DEBUG: configuring git user identity for commit
+ABOUT TO COMMIT
+On branch sync/melsec_mc
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../.github/scripts/sync-run.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+COMMIT_EXIT=1
+NOTICE: commit exited with status 1 (may be nothing to commit)
+15:09:58.047213 git.c:502               trace: built-in: git push https://x-access-token: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@github.com/tyaro/melsec_mc.git sync/melsec_mc --force-with-lease
+15:09:58.047875 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:09:58.047887 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:09:58.049006 git.c:806               trace: exec: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:09:58.049032 run-command.c:673       trace: run_command: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:09:58.049038 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:09:58.058952 http.c:890              == Info: Host github.com:443 was resolved.
+15:09:58.058978 http.c:890              == Info: IPv6: (none)
+15:09:58.058980 http.c:890              == Info: IPv4: 140.82.114.4
+15:09:58.058993 http.c:890              == Info:   Trying 140.82.114.4:443...
+15:09:58.064374 http.c:890              == Info: Connected to github.com (140.82.114.4) port 443
+15:09:58.092094 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+15:09:58.092134 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+15:09:58.092156 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+15:09:58.098464 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+15:09:58.100624 http.c:890              == Info:   server certificate verification OK
+15:09:58.100632 http.c:890              == Info:   server certificate status verification SKIPPED
+15:09:58.100711 http.c:890              == Info:   common name: github.com (matched)
+15:09:58.100721 http.c:890              == Info:   server certificate expiration date OK
+15:09:58.100724 http.c:890              == Info:   server certificate activation date OK
+15:09:58.100732 http.c:890              == Info:   certificate public key: EC/ECDSA
+15:09:58.100735 http.c:890              == Info:   certificate version: #3
+15:09:58.100744 http.c:890              == Info:   subject: CN=github.com
+15:09:58.100749 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+15:09:58.100753 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+15:09:58.100777 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+15:09:58.100789 http.c:890              == Info: ALPN: server accepted h2
+15:09:58.100834 http.c:890              == Info: using HTTP/2
+15:09:58.100869 http.c:890              == Info: [HTTP/2] [1] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:09:58.100873 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+15:09:58.100875 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+15:09:58.100877 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+15:09:58.100880 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:09:58.100882 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+15:09:58.100884 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+15:09:58.100894 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+15:09:58.100896 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+15:09:58.100898 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+15:09:58.100924 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+15:09:58.100928 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:09:58.100930 http.c:849              => Send header: Host: github.com
+15:09:58.100932 http.c:849              => Send header: User-Agent: git/2.51.2
+15:09:58.100934 http.c:849              => Send header: Accept: */*
+15:09:58.100936 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:09:58.100937 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:09:58.100939 http.c:849              => Send header: Pragma: no-cache
+15:09:58.100941 http.c:849              => Send header:
+15:09:58.118140 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:09:58.118152 http.c:849              <= Recv header: HTTP/2 401
+15:09:58.118156 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:09:58.118158 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:09:58.118161 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:09:58.118163 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:09:58.118165 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+15:09:58.118166 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+15:09:58.118169 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:09:58.118171 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+15:09:58.118174 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+15:09:58.118175 http.c:849              <= Recv header: content-length: 26
+15:09:58.118178 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:09:58.118179 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:09:58 GMT
+15:09:58.118181 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:09:58.118183 http.c:849              <= Recv header: x-github-request-id: 1C04:216257:71AFD:97B09:6914A346
+15:09:58.118185 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:09:58.118186 http.c:849              <= Recv header: x-frame-options: DENY
+15:09:58.118188 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:09:58.118190 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:09:58.118195 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:09:58.118198 http.c:849              <= Recv header:
+15:09:58.118201 http.c:890              == Info: Ignoring the response-body
+15:09:58.118212 http.c:890              == Info: Connection #0 to host github.com left intact
+15:09:58.118230 http.c:890              == Info: Issue another request to this URL: 'https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+15:09:58.118254 http.c:890              == Info: Found bundle for host: 0x55c73f8ddb50 [can multiplex]
+15:09:58.118270 http.c:890              == Info: Re-using existing connection with host github.com
+15:09:58.118283 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:09:58.118305 http.c:890              == Info: [HTTP/2] [3] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:09:58.118308 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+15:09:58.118311 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+15:09:58.118313 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+15:09:58.118315 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:09:58.118318 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+15:09:58.118320 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+15:09:58.118323 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+15:09:58.118325 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+15:09:58.118327 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+15:09:58.118329 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+15:09:58.118359 http.c:837              => Send header, 0000000313 bytes (0x00000139)
+15:09:58.118363 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:09:58.118364 http.c:849              => Send header: Host: github.com
+15:09:58.118366 http.c:849              => Send header: Authorization: Basic <redacted>
+15:09:58.118368 http.c:849              => Send header: User-Agent: git/2.51.2
+15:09:58.118369 http.c:849              => Send header: Accept: */*
+15:09:58.118371 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:09:58.118373 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:09:58.118374 http.c:849              => Send header: Pragma: no-cache
+15:09:58.118376 http.c:849              => Send header:
+15:09:58.162737 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:09:58.162749 http.c:849              <= Recv header: HTTP/2 200
+15:09:58.162753 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:09:58.162755 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:09:58.162758 http.c:837              <= Recv header, 0000000060 bytes (0x0000003c)
+15:09:58.162760 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+15:09:58.162762 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:09:58.162764 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:09:58.162766 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:09:58.162767 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:09:58.162769 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:09:58.162771 http.c:849              <= Recv header: pragma: no-cache
+15:09:58.162773 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:09:58.162774 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:09:58.162776 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:09:58.162778 http.c:849              <= Recv header: vary: Accept-Encoding
+15:09:58.162780 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:09:58.162781 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:09:58 GMT
+15:09:58.162783 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:09:58.162785 http.c:849              <= Recv header: x-github-request-id: 1C04:216257:71B20:97B32:6914A346
+15:09:58.162786 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:09:58.162788 http.c:849              <= Recv header: x-frame-options: DENY
+15:09:58.162790 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:09:58.162791 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:09:58.162794 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:09:58.162796 http.c:849              <= Recv header:
+15:09:58.184923 http.c:890              == Info: Connection #0 to host github.com left intact
+15:09:58.184946 pkt-line.c:85           packet:          git< # service=git-receive-pack
+15:09:58.184949 pkt-line.c:85           packet:          git< 0000
+15:09:58.184951 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C04:216257:71B20:97B32:6914A346 push-options
+15:09:58.184955 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:09:58.184957 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:09:58.184959 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:09:58.184961 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:09:58.184963 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:09:58.184964 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:09:58.184966 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:09:58.184967 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:09:58.184969 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:09:58.184970 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:09:58.184972 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:09:58.184974 pkt-line.c:85           packet:          git< 0000
+To https://github.com/tyaro/melsec_mc.git
+ ! [rejected]        sync/melsec_mc -> sync/melsec_mc (stale info)
+error: failed to push some refs to 'https://github.com/tyaro/melsec_mc.git'
+push failed, retrying (1)
+15:10:28.193113 git.c:502               trace: built-in: git push https://x-access-token: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@github.com/tyaro/melsec_mc.git sync/melsec_mc --force-with-lease
+15:10:28.193587 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:28.193603 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:28.194938 git.c:806               trace: exec: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:28.194971 run-command.c:673       trace: run_command: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:28.194981 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:28.201660 http.c:890              == Info: Host github.com:443 was resolved.
+15:10:28.201687 http.c:890              == Info: IPv6: (none)
+15:10:28.201690 http.c:890              == Info: IPv4: 140.82.114.4
+15:10:28.201707 http.c:890              == Info:   Trying 140.82.114.4:443...
+15:10:28.207206 http.c:890              == Info: Connected to github.com (140.82.114.4) port 443
+15:10:28.235021 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+15:10:28.235072 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+15:10:28.235102 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+15:10:28.241580 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+15:10:28.243550 http.c:890              == Info:   server certificate verification OK
+15:10:28.243559 http.c:890              == Info:   server certificate status verification SKIPPED
+15:10:28.243636 http.c:890              == Info:   common name: github.com (matched)
+15:10:28.243645 http.c:890              == Info:   server certificate expiration date OK
+15:10:28.243649 http.c:890              == Info:   server certificate activation date OK
+15:10:28.243656 http.c:890              == Info:   certificate public key: EC/ECDSA
+15:10:28.243659 http.c:890              == Info:   certificate version: #3
+15:10:28.243668 http.c:890              == Info:   subject: CN=github.com
+15:10:28.243673 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+15:10:28.243677 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+15:10:28.243701 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+15:10:28.243713 http.c:890              == Info: ALPN: server accepted h2
+15:10:28.243762 http.c:890              == Info: using HTTP/2
+15:10:28.243798 http.c:890              == Info: [HTTP/2] [1] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:10:28.243801 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+15:10:28.243804 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+15:10:28.243806 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+15:10:28.243809 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:10:28.243812 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+15:10:28.243814 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+15:10:28.243817 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+15:10:28.243820 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+15:10:28.243823 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+15:10:28.243850 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+15:10:28.243859 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:10:28.243862 http.c:849              => Send header: Host: github.com
+15:10:28.243863 http.c:849              => Send header: User-Agent: git/2.51.2
+15:10:28.243865 http.c:849              => Send header: Accept: */*
+15:10:28.243867 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:10:28.243868 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:10:28.243870 http.c:849              => Send header: Pragma: no-cache
+15:10:28.243872 http.c:849              => Send header:
+15:10:28.263566 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:10:28.263577 http.c:849              <= Recv header: HTTP/2 401
+15:10:28.263582 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:10:28.263584 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:10:28.263587 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:10:28.263588 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:10:28.263591 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+15:10:28.263593 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+15:10:28.263596 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:10:28.263598 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+15:10:28.263603 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+15:10:28.263606 http.c:849              <= Recv header: content-length: 26
+15:10:28.263611 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:10:28.263617 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:10:28 GMT
+15:10:28.263621 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:10:28.263624 http.c:849              <= Recv header: x-github-request-id: 1C00:158A11:6A5F6:8BDF4:6914A364
+15:10:28.263628 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:10:28.263630 http.c:849              <= Recv header: x-frame-options: DENY
+15:10:28.263635 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:10:28.263638 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:10:28.263642 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:10:28.263645 http.c:849              <= Recv header:
+15:10:28.263648 http.c:890              == Info: Ignoring the response-body
+15:10:28.263657 http.c:890              == Info: Connection #0 to host github.com left intact
+15:10:28.263678 http.c:890              == Info: Issue another request to this URL: 'https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+15:10:28.263701 http.c:890              == Info: Found bundle for host: 0x55a4a94fbb50 [can multiplex]
+15:10:28.263707 http.c:890              == Info: Re-using existing connection with host github.com
+15:10:28.263721 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:10:28.263744 http.c:890              == Info: [HTTP/2] [3] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:10:28.263752 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+15:10:28.263756 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+15:10:28.263759 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+15:10:28.263763 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:10:28.263767 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+15:10:28.263770 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+15:10:28.263773 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+15:10:28.263777 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+15:10:28.263780 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+15:10:28.263783 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+15:10:28.263816 http.c:837              => Send header, 0000000313 bytes (0x00000139)
+15:10:28.263826 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:10:28.263829 http.c:849              => Send header: Host: github.com
+15:10:28.263832 http.c:849              => Send header: Authorization: Basic <redacted>
+15:10:28.263834 http.c:849              => Send header: User-Agent: git/2.51.2
+15:10:28.263837 http.c:849              => Send header: Accept: */*
+15:10:28.263839 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:10:28.263841 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:10:28.263844 http.c:849              => Send header: Pragma: no-cache
+15:10:28.263846 http.c:849              => Send header:
+15:10:28.315409 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:10:28.315417 http.c:849              <= Recv header: HTTP/2 200
+15:10:28.315421 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:10:28.315424 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:10:28.315427 http.c:837              <= Recv header, 0000000060 bytes (0x0000003c)
+15:10:28.315429 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+15:10:28.315432 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:10:28.315434 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:10:28.315437 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:10:28.315439 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:10:28.315442 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:10:28.315444 http.c:849              <= Recv header: pragma: no-cache
+15:10:28.315446 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:10:28.315448 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:10:28.315451 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:10:28.315452 http.c:849              <= Recv header: vary: Accept-Encoding
+15:10:28.315455 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:10:28.315457 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:10:28 GMT
+15:10:28.315459 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:10:28.315461 http.c:849              <= Recv header: x-github-request-id: 1C00:158A11:6A620:8BE28:6914A364
+15:10:28.315463 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:10:28.315465 http.c:849              <= Recv header: x-frame-options: DENY
+15:10:28.315468 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:10:28.315470 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:10:28.315472 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:10:28.315474 http.c:849              <= Recv header:
+15:10:28.334495 http.c:890              == Info: Connection #0 to host github.com left intact
+15:10:28.334534 pkt-line.c:85           packet:          git< # service=git-receive-pack
+15:10:28.334538 pkt-line.c:85           packet:          git< 0000
+15:10:28.334542 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C00:158A11:6A620:8BE28:6914A364 push-options
+15:10:28.334547 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:10:28.334550 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:10:28.334552 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:10:28.334555 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:10:28.334558 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:10:28.334561 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:10:28.334563 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:10:28.334565 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:10:28.334568 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:10:28.334570 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:10:28.334572 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:10:28.334575 pkt-line.c:85           packet:          git< 0000
+To https://github.com/tyaro/melsec_mc.git
+ ! [rejected]        sync/melsec_mc -> sync/melsec_mc (stale info)
+error: failed to push some refs to 'https://github.com/tyaro/melsec_mc.git'
+push failed, retrying (2)
+15:10:58.341938 git.c:502               trace: built-in: git push https://x-access-token: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@github.com/tyaro/melsec_mc.git sync/melsec_mc --force-with-lease
+15:10:58.342423 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:58.342438 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:58.343741 git.c:806               trace: exec: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:58.343768 run-command.c:673       trace: run_command: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:58.343777 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:10:58.380727 http.c:890              == Info: Host github.com:443 was resolved.
+15:10:58.380765 http.c:890              == Info: IPv6: (none)
+15:10:58.380768 http.c:890              == Info: IPv4: 140.82.114.3
+15:10:58.380791 http.c:890              == Info:   Trying 140.82.114.3:443...
+15:10:58.386379 http.c:890              == Info: Connected to github.com (140.82.114.3) port 443
+15:10:58.414358 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+15:10:58.414405 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+15:10:58.414434 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+15:10:58.420883 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+15:10:58.422836 http.c:890              == Info:   server certificate verification OK
+15:10:58.422845 http.c:890              == Info:   server certificate status verification SKIPPED
+15:10:58.422917 http.c:890              == Info:   common name: github.com (matched)
+15:10:58.422943 http.c:890              == Info:   server certificate expiration date OK
+15:10:58.422949 http.c:890              == Info:   server certificate activation date OK
+15:10:58.422957 http.c:890              == Info:   certificate public key: EC/ECDSA
+15:10:58.422960 http.c:890              == Info:   certificate version: #3
+15:10:58.422970 http.c:890              == Info:   subject: CN=github.com
+15:10:58.422975 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+15:10:58.422979 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+15:10:58.423003 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+15:10:58.423015 http.c:890              == Info: ALPN: server accepted h2
+15:10:58.423064 http.c:890              == Info: using HTTP/2
+15:10:58.423095 http.c:890              == Info: [HTTP/2] [1] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:10:58.423106 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+15:10:58.423109 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+15:10:58.423111 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+15:10:58.423113 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:10:58.423116 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+15:10:58.423118 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+15:10:58.423120 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+15:10:58.423123 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+15:10:58.423125 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+15:10:58.423151 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+15:10:58.423154 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:10:58.423156 http.c:849              => Send header: Host: github.com
+15:10:58.423158 http.c:849              => Send header: User-Agent: git/2.51.2
+15:10:58.423160 http.c:849              => Send header: Accept: */*
+15:10:58.423161 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:10:58.423163 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:10:58.423164 http.c:849              => Send header: Pragma: no-cache
+15:10:58.423166 http.c:849              => Send header:
+15:10:58.437800 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:10:58.437812 http.c:849              <= Recv header: HTTP/2 401
+15:10:58.437817 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:10:58.437818 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:10:58.437821 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:10:58.437824 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:10:58.437826 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+15:10:58.437828 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+15:10:58.437830 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:10:58.437832 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+15:10:58.437835 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+15:10:58.437836 http.c:849              <= Recv header: content-length: 26
+15:10:58.437838 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:10:58.437840 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:10:58 GMT
+15:10:58.437842 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:10:58.437843 http.c:849              <= Recv header: x-github-request-id: 1C00:158A11:771A1:9D069:6914A382
+15:10:58.437845 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:10:58.437847 http.c:849              <= Recv header: x-frame-options: DENY
+15:10:58.437849 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:10:58.437852 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:10:58.437854 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:10:58.437856 http.c:849              <= Recv header:
+15:10:58.437860 http.c:890              == Info: Ignoring the response-body
+15:10:58.437869 http.c:890              == Info: Connection #0 to host github.com left intact
+15:10:58.437887 http.c:890              == Info: Issue another request to this URL: 'https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+15:10:58.437909 http.c:890              == Info: Found bundle for host: 0x5601c7862b50 [can multiplex]
+15:10:58.437922 http.c:890              == Info: Re-using existing connection with host github.com
+15:10:58.437935 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:10:58.437959 http.c:890              == Info: [HTTP/2] [3] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:10:58.437963 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+15:10:58.437966 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+15:10:58.437969 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+15:10:58.437973 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:10:58.437976 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+15:10:58.437979 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+15:10:58.437982 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+15:10:58.437986 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+15:10:58.437989 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+15:10:58.437992 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+15:10:58.438022 http.c:837              => Send header, 0000000313 bytes (0x00000139)
+15:10:58.438028 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:10:58.438030 http.c:849              => Send header: Host: github.com
+15:10:58.438033 http.c:849              => Send header: Authorization: Basic <redacted>
+15:10:58.438035 http.c:849              => Send header: User-Agent: git/2.51.2
+15:10:58.438037 http.c:849              => Send header: Accept: */*
+15:10:58.438040 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:10:58.438042 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:10:58.438044 http.c:849              => Send header: Pragma: no-cache
+15:10:58.438046 http.c:849              => Send header:
+15:10:58.477558 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:10:58.477568 http.c:849              <= Recv header: HTTP/2 200
+15:10:58.477571 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:10:58.477573 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:10:58.477576 http.c:837              <= Recv header, 0000000060 bytes (0x0000003c)
+15:10:58.477577 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+15:10:58.477579 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:10:58.477581 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:10:58.477583 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:10:58.477585 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:10:58.477587 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:10:58.477588 http.c:849              <= Recv header: pragma: no-cache
+15:10:58.477590 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:10:58.477592 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:10:58.477594 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:10:58.477595 http.c:849              <= Recv header: vary: Accept-Encoding
+15:10:58.477597 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:10:58.477599 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:10:58 GMT
+15:10:58.477600 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:10:58.477602 http.c:849              <= Recv header: x-github-request-id: 1C00:158A11:771BC:9D087:6914A382
+15:10:58.477604 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:10:58.477605 http.c:849              <= Recv header: x-frame-options: DENY
+15:10:58.477607 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:10:58.477609 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:10:58.477612 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:10:58.477614 http.c:849              <= Recv header:
+15:10:58.492673 http.c:890              == Info: Connection #0 to host github.com left intact
+15:10:58.492692 pkt-line.c:85           packet:          git< # service=git-receive-pack
+15:10:58.492694 pkt-line.c:85           packet:          git< 0000
+15:10:58.492697 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C00:158A11:771BC:9D087:6914A382 push-options
+15:10:58.492701 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:10:58.492703 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:10:58.492705 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:10:58.492706 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:10:58.492708 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:10:58.492710 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:10:58.492712 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:10:58.492713 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:10:58.492714 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:10:58.492716 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:10:58.492717 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:10:58.492719 pkt-line.c:85           packet:          git< 0000
+To https://github.com/tyaro/melsec_mc.git
+ ! [rejected]        sync/melsec_mc -> sync/melsec_mc (stale info)
+error: failed to push some refs to 'https://github.com/tyaro/melsec_mc.git'
+push failed, retrying (3)
+15:11:28.499976 git.c:502               trace: built-in: git push https://x-access-token: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@github.com/tyaro/melsec_mc.git sync/melsec_mc --force-with-lease
+15:11:28.500488 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:28.500506 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:28.501850 git.c:806               trace: exec: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:28.501877 run-command.c:673       trace: run_command: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:28.501884 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:28.514101 http.c:890              == Info: Host github.com:443 was resolved.
+15:11:28.514128 http.c:890              == Info: IPv6: (none)
+15:11:28.514129 http.c:890              == Info: IPv4: 140.82.114.3
+15:11:28.514144 http.c:890              == Info:   Trying 140.82.114.3:443...
+15:11:28.519775 http.c:890              == Info: Connected to github.com (140.82.114.3) port 443
+15:11:28.547290 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+15:11:28.547329 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+15:11:28.547343 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+15:11:28.553930 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+15:11:28.555873 http.c:890              == Info:   server certificate verification OK
+15:11:28.555882 http.c:890              == Info:   server certificate status verification SKIPPED
+15:11:28.555939 http.c:890              == Info:   common name: github.com (matched)
+15:11:28.555947 http.c:890              == Info:   server certificate expiration date OK
+15:11:28.555951 http.c:890              == Info:   server certificate activation date OK
+15:11:28.555958 http.c:890              == Info:   certificate public key: EC/ECDSA
+15:11:28.555961 http.c:890              == Info:   certificate version: #3
+15:11:28.555970 http.c:890              == Info:   subject: CN=github.com
+15:11:28.555979 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+15:11:28.555984 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+15:11:28.556010 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+15:11:28.556033 http.c:890              == Info: ALPN: server accepted h2
+15:11:28.556082 http.c:890              == Info: using HTTP/2
+15:11:28.556116 http.c:890              == Info: [HTTP/2] [1] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:11:28.556125 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+15:11:28.556128 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+15:11:28.556131 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+15:11:28.556134 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:11:28.556137 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+15:11:28.556139 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+15:11:28.556142 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+15:11:28.556144 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+15:11:28.556146 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+15:11:28.556173 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+15:11:28.556181 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:11:28.556183 http.c:849              => Send header: Host: github.com
+15:11:28.556185 http.c:849              => Send header: User-Agent: git/2.51.2
+15:11:28.556187 http.c:849              => Send header: Accept: */*
+15:11:28.556189 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:11:28.556191 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:11:28.556193 http.c:849              => Send header: Pragma: no-cache
+15:11:28.556194 http.c:849              => Send header:
+15:11:28.572046 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:11:28.572056 http.c:849              <= Recv header: HTTP/2 401
+15:11:28.572062 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:11:28.572065 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:11:28.572070 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:11:28.572073 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:11:28.572076 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+15:11:28.572079 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+15:11:28.572083 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:11:28.572086 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+15:11:28.572090 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+15:11:28.572093 http.c:849              <= Recv header: content-length: 26
+15:11:28.572096 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:11:28.572098 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:11:28 GMT
+15:11:28.572101 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:11:28.572104 http.c:849              <= Recv header: x-github-request-id: 1C00:158A11:84BFA:AF11B:6914A3A0
+15:11:28.572107 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:11:28.572109 http.c:849              <= Recv header: x-frame-options: DENY
+15:11:28.572112 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:11:28.572115 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:11:28.572119 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:11:28.572121 http.c:849              <= Recv header:
+15:11:28.572124 http.c:890              == Info: Ignoring the response-body
+15:11:28.572132 http.c:890              == Info: Connection #0 to host github.com left intact
+15:11:28.572151 http.c:890              == Info: Issue another request to this URL: 'https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+15:11:28.572177 http.c:890              == Info: Found bundle for host: 0x562e08a66b50 [can multiplex]
+15:11:28.572190 http.c:890              == Info: Re-using existing connection with host github.com
+15:11:28.572203 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:11:28.572226 http.c:890              == Info: [HTTP/2] [3] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:11:28.572229 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+15:11:28.572232 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+15:11:28.572236 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+15:11:28.572239 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:11:28.572243 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+15:11:28.572246 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+15:11:28.572249 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+15:11:28.572252 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+15:11:28.572255 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+15:11:28.572258 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+15:11:28.572288 http.c:837              => Send header, 0000000313 bytes (0x00000139)
+15:11:28.572297 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:11:28.572300 http.c:849              => Send header: Host: github.com
+15:11:28.572303 http.c:849              => Send header: Authorization: Basic <redacted>
+15:11:28.572305 http.c:849              => Send header: User-Agent: git/2.51.2
+15:11:28.572307 http.c:849              => Send header: Accept: */*
+15:11:28.572309 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:11:28.572311 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:11:28.572313 http.c:849              => Send header: Pragma: no-cache
+15:11:28.572316 http.c:849              => Send header:
+15:11:28.618426 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:11:28.618439 http.c:849              <= Recv header: HTTP/2 200
+15:11:28.618444 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:11:28.618447 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:11:28.618452 http.c:837              <= Recv header, 0000000060 bytes (0x0000003c)
+15:11:28.618455 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+15:11:28.618459 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:11:28.618462 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:11:28.618466 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:11:28.618469 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:11:28.618472 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:11:28.618475 http.c:849              <= Recv header: pragma: no-cache
+15:11:28.618478 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:11:28.618481 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:11:28.618484 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:11:28.618486 http.c:849              <= Recv header: vary: Accept-Encoding
+15:11:28.618489 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:11:28.618492 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:11:28 GMT
+15:11:28.618495 http.c:837              <= Recv header, 0000000055 bytes (0x00000037)
+15:11:28.618497 http.c:849              <= Recv header: x-github-request-id: 1C00:158A11:84C1D:AF13B:6914A3A0
+15:11:28.618500 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:11:28.618503 http.c:849              <= Recv header: x-frame-options: DENY
+15:11:28.618506 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:11:28.618508 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:11:28.618512 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:11:28.618573 http.c:849              <= Recv header:
+15:11:28.632608 http.c:890              == Info: Connection #0 to host github.com left intact
+15:11:28.632632 pkt-line.c:85           packet:          git< # service=git-receive-pack
+15:11:28.632634 pkt-line.c:85           packet:          git< 0000
+15:11:28.632638 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C00:158A11:84C1D:AF13B:6914A3A0 push-options
+15:11:28.632642 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:11:28.632645 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:11:28.632647 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:11:28.632649 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:11:28.632651 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:11:28.632653 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:11:28.632655 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:11:28.632657 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:11:28.632659 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:11:28.632661 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:11:28.632663 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:11:28.632664 pkt-line.c:85           packet:          git< 0000
+To https://github.com/tyaro/melsec_mc.git
+ ! [rejected]        sync/melsec_mc -> sync/melsec_mc (stale info)
+error: failed to push some refs to 'https://github.com/tyaro/melsec_mc.git'
+push failed, retrying (4)
+15:11:58.640020 git.c:502               trace: built-in: git push https://x-access-token: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@github.com/tyaro/melsec_mc.git sync/melsec_mc --force-with-lease
+15:11:58.640415 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:58.640428 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:58.641674 git.c:806               trace: exec: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:58.641699 run-command.c:673       trace: run_command: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:58.641709 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:11:58.657485 http.c:890              == Info: Host github.com:443 was resolved.
+15:11:58.657536 http.c:890              == Info: IPv6: (none)
+15:11:58.657540 http.c:890              == Info: IPv4: 140.82.113.3
+15:11:58.657560 http.c:890              == Info:   Trying 140.82.113.3:443...
+15:11:58.662876 http.c:890              == Info: Connected to github.com (140.82.113.3) port 443
+15:11:58.690151 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+15:11:58.690190 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+15:11:58.690215 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+15:11:58.697844 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+15:11:58.699809 http.c:890              == Info:   server certificate verification OK
+15:11:58.699817 http.c:890              == Info:   server certificate status verification SKIPPED
+15:11:58.699889 http.c:890              == Info:   common name: github.com (matched)
+15:11:58.699911 http.c:890              == Info:   server certificate expiration date OK
+15:11:58.699917 http.c:890              == Info:   server certificate activation date OK
+15:11:58.699925 http.c:890              == Info:   certificate public key: EC/ECDSA
+15:11:58.699928 http.c:890              == Info:   certificate version: #3
+15:11:58.699937 http.c:890              == Info:   subject: CN=github.com
+15:11:58.699942 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+15:11:58.699947 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+15:11:58.699970 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+15:11:58.699981 http.c:890              == Info: ALPN: server accepted h2
+15:11:58.700033 http.c:890              == Info: using HTTP/2
+15:11:58.700065 http.c:890              == Info: [HTTP/2] [1] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:11:58.700069 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+15:11:58.700072 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+15:11:58.700074 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+15:11:58.700077 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:11:58.700079 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+15:11:58.700082 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+15:11:58.700084 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+15:11:58.700086 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+15:11:58.700088 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+15:11:58.700115 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+15:11:58.700119 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:11:58.700121 http.c:849              => Send header: Host: github.com
+15:11:58.700122 http.c:849              => Send header: User-Agent: git/2.51.2
+15:11:58.700124 http.c:849              => Send header: Accept: */*
+15:11:58.700126 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:11:58.700128 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:11:58.700129 http.c:849              => Send header: Pragma: no-cache
+15:11:58.700131 http.c:849              => Send header:
+15:11:58.714896 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:11:58.714908 http.c:849              <= Recv header: HTTP/2 401
+15:11:58.714912 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:11:58.714914 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:11:58.714917 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:11:58.714919 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:11:58.714922 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+15:11:58.714923 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+15:11:58.714927 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:11:58.714930 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+15:11:58.714935 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+15:11:58.714938 http.c:849              <= Recv header: content-length: 26
+15:11:58.714943 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:11:58.714949 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:11:58 GMT
+15:11:58.714953 http.c:837              <= Recv header, 0000000058 bytes (0x0000003a)
+15:11:58.714956 http.c:849              <= Recv header: x-github-request-id: 1C00:6E268:750AB8E:9D89F87:6914A3BE
+15:11:58.714960 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:11:58.714963 http.c:849              <= Recv header: x-frame-options: DENY
+15:11:58.714966 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:11:58.714969 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:11:58.714973 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:11:58.714976 http.c:849              <= Recv header:
+15:11:58.714979 http.c:890              == Info: Ignoring the response-body
+15:11:58.714988 http.c:890              == Info: Connection #0 to host github.com left intact
+15:11:58.715007 http.c:890              == Info: Issue another request to this URL: 'https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+15:11:58.715035 http.c:890              == Info: Found bundle for host: 0x55c5f0347b50 [can multiplex]
+15:11:58.715047 http.c:890              == Info: Re-using existing connection with host github.com
+15:11:58.715061 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:11:58.715085 http.c:890              == Info: [HTTP/2] [3] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:11:58.715094 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+15:11:58.715097 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+15:11:58.715101 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+15:11:58.715104 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:11:58.715108 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+15:11:58.715112 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+15:11:58.715115 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+15:11:58.715118 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+15:11:58.715121 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+15:11:58.715124 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+15:11:58.715157 http.c:837              => Send header, 0000000313 bytes (0x00000139)
+15:11:58.715164 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:11:58.715167 http.c:849              => Send header: Host: github.com
+15:11:58.715169 http.c:849              => Send header: Authorization: Basic <redacted>
+15:11:58.715172 http.c:849              => Send header: User-Agent: git/2.51.2
+15:11:58.715174 http.c:849              => Send header: Accept: */*
+15:11:58.715177 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:11:58.715179 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:11:58.715182 http.c:849              => Send header: Pragma: no-cache
+15:11:58.715184 http.c:849              => Send header:
+15:11:58.758356 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:11:58.758368 http.c:849              <= Recv header: HTTP/2 200
+15:11:58.758375 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:11:58.758378 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:11:58.758382 http.c:837              <= Recv header, 0000000060 bytes (0x0000003c)
+15:11:58.758385 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+15:11:58.758389 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:11:58.758392 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:11:58.758396 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:11:58.758399 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:11:58.758402 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:11:58.758405 http.c:849              <= Recv header: pragma: no-cache
+15:11:58.758408 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:11:58.758411 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:11:58.758415 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:11:58.758417 http.c:849              <= Recv header: vary: Accept-Encoding
+15:11:58.758421 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:11:58.758423 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:11:58 GMT
+15:11:58.758426 http.c:837              <= Recv header, 0000000058 bytes (0x0000003a)
+15:11:58.758428 http.c:849              <= Recv header: x-github-request-id: 1C00:6E268:750ABA0:9D89FA0:6914A3BE
+15:11:58.758432 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:11:58.758435 http.c:849              <= Recv header: x-frame-options: DENY
+15:11:58.758439 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:11:58.758442 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:11:58.758446 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:11:58.758449 http.c:849              <= Recv header:
+15:11:58.777970 http.c:890              == Info: Connection #0 to host github.com left intact
+15:11:58.777995 pkt-line.c:85           packet:          git< # service=git-receive-pack
+15:11:58.777999 pkt-line.c:85           packet:          git< 0000
+15:11:58.778002 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C00:6E268:750ABA0:9D89FA0:6914A3BE push-options
+15:11:58.778008 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:11:58.778011 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:11:58.778013 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:11:58.778015 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:11:58.778018 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:11:58.778020 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:11:58.778023 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:11:58.778025 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:11:58.778027 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:11:58.778029 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:11:58.778032 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:11:58.778034 pkt-line.c:85           packet:          git< 0000
+To https://github.com/tyaro/melsec_mc.git
+ ! [rejected]        sync/melsec_mc -> sync/melsec_mc (stale info)
+error: failed to push some refs to 'https://github.com/tyaro/melsec_mc.git'
+push failed, retrying (5)
+All --force-with-lease attempts failed after commit; attempting final fallback: git push --force
+15:12:28.786512 git.c:502               trace: built-in: git push https://x-access-token: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@github.com/tyaro/melsec_mc.git sync/melsec_mc --force
+15:12:28.786992 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:12:28.787004 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:12:28.788143 git.c:806               trace: exec: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:12:28.788173 run-command.c:673       trace: run_command: git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:12:28.788188 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https https://x-access-token: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@github.com/tyaro/melsec_mc.git https://x-access-token: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@github.com/tyaro/melsec_mc.git
+15:12:28.794932 http.c:890              == Info: Host github.com:443 was resolved.
+15:12:28.794958 http.c:890              == Info: IPv6: (none)
+15:12:28.794961 http.c:890              == Info: IPv4: 140.82.113.3
+15:12:28.794977 http.c:890              == Info:   Trying 140.82.113.3:443...
+15:12:28.800236 http.c:890              == Info: Connected to github.com (140.82.113.3) port 443
+15:12:28.827565 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+15:12:28.827611 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+15:12:28.827640 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+15:12:28.834809 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+15:12:28.836795 http.c:890              == Info:   server certificate verification OK
+15:12:28.836803 http.c:890              == Info:   server certificate status verification SKIPPED
+15:12:28.836878 http.c:890              == Info:   common name: github.com (matched)
+15:12:28.836902 http.c:890              == Info:   server certificate expiration date OK
+15:12:28.836909 http.c:890              == Info:   server certificate activation date OK
+15:12:28.836917 http.c:890              == Info:   certificate public key: EC/ECDSA
+15:12:28.836919 http.c:890              == Info:   certificate version: #3
+15:12:28.836928 http.c:890              == Info:   subject: CN=github.com
+15:12:28.836933 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+15:12:28.836938 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+15:12:28.836961 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+15:12:28.836973 http.c:890              == Info: ALPN: server accepted h2
+15:12:28.837020 http.c:890              == Info: using HTTP/2
+15:12:28.837051 http.c:890              == Info: [HTTP/2] [1] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:12:28.837054 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+15:12:28.837057 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+15:12:28.837059 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+15:12:28.837062 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:12:28.837064 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+15:12:28.837066 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+15:12:28.837068 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+15:12:28.837071 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+15:12:28.837073 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+15:12:28.837096 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+15:12:28.837100 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:12:28.837102 http.c:849              => Send header: Host: github.com
+15:12:28.837103 http.c:849              => Send header: User-Agent: git/2.51.2
+15:12:28.837105 http.c:849              => Send header: Accept: */*
+15:12:28.837107 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:12:28.837108 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:12:28.837110 http.c:849              => Send header: Pragma: no-cache
+15:12:28.837111 http.c:849              => Send header:
+15:12:28.858294 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:12:28.858306 http.c:849              <= Recv header: HTTP/2 401
+15:12:28.858310 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:12:28.858312 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:12:28.858315 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:12:28.858317 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:12:28.858319 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+15:12:28.858321 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+15:12:28.858323 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:12:28.858325 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+15:12:28.858328 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+15:12:28.858330 http.c:849              <= Recv header: content-length: 26
+15:12:28.858332 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:12:28.858333 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:12:28 GMT
+15:12:28.858335 http.c:837              <= Recv header, 0000000058 bytes (0x0000003a)
+15:12:28.858337 http.c:849              <= Recv header: x-github-request-id: 1C00:6E268:75186B6:9D9C8C9:6914A3DC
+15:12:28.858339 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:12:28.858340 http.c:849              <= Recv header: x-frame-options: DENY
+15:12:28.858343 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:12:28.858344 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:12:28.858347 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:12:28.858349 http.c:849              <= Recv header:
+15:12:28.858351 http.c:890              == Info: Ignoring the response-body
+15:12:28.858358 http.c:890              == Info: Connection #0 to host github.com left intact
+15:12:28.858369 http.c:890              == Info: Issue another request to this URL: 'https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+15:12:28.858391 http.c:890              == Info: Found bundle for host: 0x55d29ebbcb50 [can multiplex]
+15:12:28.858399 http.c:890              == Info: Re-using existing connection with host github.com
+15:12:28.858413 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:12:28.858440 http.c:890              == Info: [HTTP/2] [3] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+15:12:28.858444 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+15:12:28.858448 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+15:12:28.858450 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+15:12:28.858454 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+15:12:28.858458 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+15:12:28.858461 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+15:12:28.858464 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+15:12:28.858467 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+15:12:28.858470 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+15:12:28.858473 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+15:12:28.858504 http.c:837              => Send header, 0000000313 bytes (0x00000139)
+15:12:28.858537 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+15:12:28.858540 http.c:849              => Send header: Host: github.com
+15:12:28.858543 http.c:849              => Send header: Authorization: Basic <redacted>
+15:12:28.858545 http.c:849              => Send header: User-Agent: git/2.51.2
+15:12:28.858547 http.c:849              => Send header: Accept: */*
+15:12:28.858549 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:12:28.858552 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:12:28.858554 http.c:849              => Send header: Pragma: no-cache
+15:12:28.858556 http.c:849              => Send header:
+15:12:28.907792 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:12:28.907803 http.c:849              <= Recv header: HTTP/2 200
+15:12:28.907807 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:12:28.907809 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:12:28.907811 http.c:837              <= Recv header, 0000000060 bytes (0x0000003c)
+15:12:28.907813 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+15:12:28.907815 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:12:28.907817 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:12:28.907819 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:12:28.907820 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:12:28.907822 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:12:28.907824 http.c:849              <= Recv header: pragma: no-cache
+15:12:28.907826 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:12:28.907828 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:12:28.907829 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:12:28.907831 http.c:849              <= Recv header: vary: Accept-Encoding
+15:12:28.907833 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:12:28.907834 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:12:28 GMT
+15:12:28.907836 http.c:837              <= Recv header, 0000000058 bytes (0x0000003a)
+15:12:28.907838 http.c:849              <= Recv header: x-github-request-id: 1C00:6E268:75186D8:9D9C8F9:6914A3DC
+15:12:28.907840 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:12:28.907841 http.c:849              <= Recv header: x-frame-options: DENY
+15:12:28.907843 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:12:28.907845 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:12:28.907847 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:12:28.907849 http.c:849              <= Recv header:
+15:12:28.924383 http.c:890              == Info: Connection #0 to host github.com left intact
+15:12:28.924407 pkt-line.c:85           packet:          git< # service=git-receive-pack
+15:12:28.924410 pkt-line.c:85           packet:          git< 0000
+15:12:28.924414 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C00:6E268:75186D8:9D9C8F9:6914A3DC push-options
+15:12:28.924418 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:12:28.924421 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:12:28.924423 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:12:28.924425 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:12:28.924427 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:12:28.924429 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:12:28.924431 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:12:28.924433 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:12:28.924435 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:12:28.924437 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:12:28.924439 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:12:28.924441 pkt-line.c:85           packet:          git< 0000
+15:12:28.925908 pkt-line.c:85           packet:          git> +refs/heads/sync/melsec_mc:refs/heads/sync/melsec_mc
+15:12:28.925918 pkt-line.c:85           packet:          git> 0000
+15:12:28.925936 run-command.c:673       trace: run_command: git send-pack --stateless-rpc --helper-status --thin --no-progress https://x-access-token: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@github.com/tyaro/melsec_mc.git/ --stdin
+15:12:28.925946 run-command.c:765       trace: start_command: /usr/lib/git-core/git send-pack --stateless-rpc --helper-status --thin --no-progress https://x-access-token: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@github.com/tyaro/melsec_mc.git/ --stdin
+15:12:28.927734 git.c:502               trace: built-in: git send-pack --stateless-rpc --helper-status --thin --no-progress https://x-access-token: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@github.com/tyaro/melsec_mc.git/ --stdin
+15:12:28.927846 pkt-line.c:85           packet:          git< +refs/heads/sync/melsec_mc:refs/heads/sync/melsec_mc
+15:12:28.927863 pkt-line.c:85           packet:          git< 0000
+15:12:28.927868 pkt-line.c:85           packet:          git< 5a315df309aa592f9dfcccbce139fe9bb90120af refs/heads/chore/add-publish-workflow-20251112\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 session-id=1C00:6E268:75186D8:9D9C8F9:6914A3DC push-options
+15:12:28.927874 pkt-line.c:85           packet:          git< e5b1523690c45aab72c696b29242cc562ffd7b9e refs/heads/ci/commit-lockfile-before-publish
+15:12:28.927883 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/heads/main
+15:12:28.927887 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-2-20251112
+15:12:28.927891 pkt-line.c:85           packet:          git< 9dd6c498176bf7564e28f67898e04a13fafb2509 refs/heads/release/v0.4.10-20251112
+15:12:28.927894 pkt-line.c:85           packet:          git< f4a92f5287b8140322d60b1afbba09babfad5543 refs/heads/sync/melsec_mc
+15:12:28.927898 pkt-line.c:85           packet:          git< 46865dc73d238715f78a99fd7d46d27d1962fcff refs/tags/v0.4.10
+15:12:28.927901 pkt-line.c:85           packet:          git< 4860f9b65be1788d2d99d58b35fd9ecd7b42acf2 refs/tags/v0.4.11
+15:12:28.927905 pkt-line.c:85           packet:          git< d0663e2330bc268d16f52a2563f2ed88921be827 refs/tags/v0.4.12
+15:12:28.927908 pkt-line.c:85           packet:          git< e2de68e230b2d82af32796ef537afe168967d55e refs/tags/v0.4.13
+15:12:28.927911 pkt-line.c:85           packet:          git< f84964eb3e243ce1bec0e071abb8f18d9e4d8357 refs/tags/v0.4.8
+15:12:28.927915 pkt-line.c:85           packet:          git< 14e8c918b6296ce8a688aaec1645aac0b4021bd0 refs/tags/v0.4.9
+15:12:28.927917 pkt-line.c:85           packet:          git< 0000
+15:12:28.928937 pkt-line.c:85           packet:          git> f4a92f5287b8140322d60b1afbba09babfad5543 09cd825e2ec8bcd431139ea04015e526d2f17513 refs/heads/sync/melsec_mc\0 report-status-v2 side-band-64k quiet object-format=sha1 agent=git/2.51.2-Linux
+15:12:28.928946 pkt-line.c:85           packet:          git> 0000
+15:12:28.928973 pkt-line.c:85           packet:          git< 00bff4a92f5287b8140322d60b1afbba09babfad5543 09cd825e2ec8bcd431139ea04015e526d2f17513 refs/heads/sync/melsec_mc\0 report-status-v2 side-band-64k quiet object-format=sha1 agent=git/2.51.2-Linux0000
+15:12:28.929015 run-command.c:673       trace: run_command: git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+15:12:28.929028 run-command.c:765       trace: start_command: /usr/lib/git-core/git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+15:12:28.930235 git.c:502               trace: built-in: git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+15:12:28.934380 pkt-line.c:85           packet:          git< PACK ...
+15:12:28.937134 pkt-line.c:85           packet:          git> 0000
+15:12:28.937222 http.c:890              == Info: Found bundle for host: 0x55d29ebbcb50 [can multiplex]
+15:12:28.937236 http.c:890              == Info: Re-using existing connection with host github.com
+15:12:28.937246 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+15:12:28.937292 http.c:890              == Info: [HTTP/2] [5] OPENED stream for https://x-access-token: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@github.com/tyaro/melsec_mc.git/git-receive-pack
+15:12:28.937299 http.c:890              == Info: [HTTP/2] [5] [:method: POST]
+15:12:28.937302 http.c:890              == Info: [HTTP/2] [5] [:scheme: https]
+15:12:28.937304 http.c:890              == Info: [HTTP/2] [5] [:authority: github.com]
+15:12:28.937307 http.c:890              == Info: [HTTP/2] [5] [:path: /tyaro/melsec_mc.git/git-receive-pack]
+15:12:28.937310 http.c:890              == Info: [HTTP/2] [5] [authorization: Basic <redacted>]
+15:12:28.937313 http.c:890              == Info: [HTTP/2] [5] [user-agent: git/2.51.2]
+15:12:28.937315 http.c:890              == Info: [HTTP/2] [5] [accept-encoding: deflate, gzip, br, zstd]
+15:12:28.937318 http.c:890              == Info: [HTTP/2] [5] [content-type: application/x-git-receive-pack-request]
+15:12:28.937320 http.c:890              == Info: [HTTP/2] [5] [accept: application/x-git-receive-pack-result]
+15:12:28.937322 http.c:890              == Info: [HTTP/2] [5] [accept-language: C, *;q=0.9]
+15:12:28.937324 http.c:890              == Info: [HTTP/2] [5] [content-length: 50247]
+15:12:28.937424 http.c:837              => Send header, 0000000389 bytes (0x00000185)
+15:12:28.937436 http.c:849              => Send header: POST /tyaro/melsec_mc.git/git-receive-pack HTTP/2
+15:12:28.937438 http.c:849              => Send header: Host: github.com
+15:12:28.937440 http.c:849              => Send header: Authorization: Basic <redacted>
+15:12:28.937442 http.c:849              => Send header: User-Agent: git/2.51.2
+15:12:28.937444 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+15:12:28.937445 http.c:849              => Send header: Content-Type: application/x-git-receive-pack-request
+15:12:28.937447 http.c:849              => Send header: Accept: application/x-git-receive-pack-result
+15:12:28.937449 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+15:12:28.937452 http.c:849              => Send header: Content-Length: 50247
+15:12:28.937454 http.c:849              => Send header:
+15:12:28.998823 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+15:12:28.998839 http.c:849              <= Recv header: HTTP/2 200
+15:12:28.998848 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+15:12:28.998853 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+15:12:28.998859 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:12:28.998864 http.c:849              <= Recv header: content-type: application/x-git-receive-pack-result
+15:12:28.998868 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+15:12:28.998870 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+15:12:28.998876 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+15:12:28.998880 http.c:849              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+15:12:28.998885 http.c:837              <= Recv header, 0000000018 bytes (0x00000012)
+15:12:28.998894 http.c:849              <= Recv header: pragma: no-cache
+15:12:28.998900 http.c:837              <= Recv header, 0000000053 bytes (0x00000035)
+15:12:28.998905 http.c:849              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+15:12:28.998911 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:12:28.998915 http.c:849              <= Recv header: vary: Accept-Encoding
+15:12:28.998918 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+15:12:28.998922 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 15:12:28 GMT
+15:12:28.998927 http.c:837              <= Recv header, 0000000058 bytes (0x0000003a)
+15:12:28.998948 http.c:849              <= Recv header: x-github-request-id: 1C00:6E268:7518766:9D9C9CB:6914A3DC
+15:12:28.998952 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+15:12:28.998957 http.c:849              <= Recv header: x-frame-options: DENY
+15:12:28.998960 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+15:12:28.998963 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+15:12:28.998971 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+15:12:28.998976 http.c:849              <= Recv header:
+15:12:29.008176 pkt-line.c:85           packet:     sideband< \2\0
+15:12:29.257680 http.c:890              == Info: Connection #0 to host github.com left intact
+15:12:29.257701 pkt-line.c:85           packet:     sideband< \1000eunpack ok
+15:12:29.257724 pkt-line.c:85           packet:          git< unpack ok
+15:12:29.257750 pkt-line.c:85           packet:     sideband< \2error: GH013: Repository rule violations found for refs/heads/sync/melsec_mc.- GITHUB PUSH PROTECTION  \37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624    Resolve the following violations before pushing again    - Push cannot contain secrets         (?) Learn how to resolve a blocked push     https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push              \37777777742\37777777600\37777777624\37777777742\37777777600\37777777624 GitHub Personal Access Token \37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624\37777777742\37777777600\37777777624       locations:         - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911           path: .github/artifacts/push-trace.log.bak_20251112_122922:1         - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911           path: .github/artifacts/push-trace.log.bak_20251112_122922:2         - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911    
+remote: error: GH013: Repository rule violations found for refs/heads/sync/melsec_mc.        
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   —————————————————————————————————————————        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+remote:             
+remote:             
+remote:       —— GitHub Personal Access Token ——————————————————————        
+remote:        locations:        
+remote:          - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911        
+remote:            path: .github/artifacts/push-trace.log.bak_20251112_122922:1        
+remote:          - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911        
+remote:            path: .github/artifacts/push-trace.log.bak_20251112_122922:2        
+remote:          - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911        
+15:12:29.257795 pkt-line.c:85           packet:     sideband< \2       path: .github/artifacts/push-trace.log.bak_20251112_122922:2         - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911           path: .github/artifacts/push-trace.log.bak_20251112_122922:3         - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911           path: .github/artifacts/push-trace.log.bak_20251112_122922:3           (?) To push, remove secret from commit(s) or follow this URL to allow the secret.       https://github.com/tyaro/melsec_mc/security/secret-scanning/unblock-secret/35MUB8mGo49G3UW1tlT846aZNnY    
+remote:            path: .github/artifacts/push-trace.log.bak_20251112_122922:2        
+remote:          - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911        
+remote:            path: .github/artifacts/push-trace.log.bak_20251112_122922:3        
+remote:          - commit: 324f031a04b4f2e3610d43a8367845c86e8c8911        
+remote:            path: .github/artifacts/push-trace.log.bak_20251112_122922:3        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+remote:        https://github.com/tyaro/melsec_mc/security/secret-scanning/unblock-secret/35MUB8mGo49G3UW1tlT846aZNnY        
+remote:             
+remote: 
+remote: 
+15:12:29.257816 pkt-line.c:85           packet:     sideband< \10051ng refs/heads/sync/melsec_mc push declined due to repository rule violations
+15:12:29.257827 pkt-line.c:85           packet:     sideband< \10000
+15:12:29.257837 pkt-line.c:85           packet:     sideband< 0000
+15:12:29.257899 pkt-line.c:85           packet:          git< ng refs/heads/sync/melsec_mc push declined due to repository rule violations
+15:12:29.257916 pkt-line.c:85           packet:          git< 0000
+15:12:29.257919 pkt-line.c:85           packet:          git> 0000
+To https://github.com/tyaro/melsec_mc.git
+ ! [remote rejected] sync/melsec_mc -> sync/melsec_mc (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/tyaro/melsec_mc.git'
+final force-push ALSO failed (status=1); leaving as-is
+=== push-trace finished: Wed Nov 12 15:12:29 UTC 2025 ===

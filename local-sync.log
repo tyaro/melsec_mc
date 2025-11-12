@@ -1,0 +1,19 @@
+Working directory: D:\develop\melsec_com
+Creating/updating branch sync/melsec_mc locally
+Your branch and 'origin/main' have diverged,
+and have 41 and 41 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+Branch sync/melsec_mc exists locally; resetting it to HEAD
+Origin URL: https://github.com/tyaro/melsec_com.git
+Starting parallel pushes...
+Origin push result:
+Pushing to origin -> sync/melsec_mc
+Target push result:
+Pushing to target remote (sync-target) -> sync/melsec_mc
+Checking for existing PR on tyaro/melsec_mc with head=sync/melsec_mc
+Creating new PR on tyaro/melsec_mc
+[31;1mAbort: [0mD:\develop\melsec_com\.github\scripts\local-sync-and-merge.ps1:164:9[0m
+[31;1m[0m[36;1mLine |[0m
+[31;1m[0m[36;1m[36;1m 164 | [0m         [36;1mAbort "Failed creating PR: $($_.Exception.Message)"[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mFailed creating PR: Response status code does not indicate success: 422 (Unprocessable Entity).[0m

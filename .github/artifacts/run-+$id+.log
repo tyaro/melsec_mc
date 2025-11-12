@@ -1,0 +1,397 @@
+Sync melsec_mc	Set up job	・ｿ2025-11-12T03:38:59.9622360Z Current runner version: '2.329.0'
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9655947Z ##[group]Runner Image Provisioner
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9657243Z Hosted Compute Agent
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9658195Z Version: 20251016.436
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9659165Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9660385Z Build Date: 2025-10-15T20:44:12Z
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9661380Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9662476Z ##[group]Operating System
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9663540Z Ubuntu
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9664390Z 24.04.3
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9665127Z LTS
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9665983Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9666719Z ##[group]Runner Image
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9667611Z Image: ubuntu-24.04
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9668586Z Version: 20251102.99.1
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9670292Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251102.99/images/ubuntu/Ubuntu2404-Readme.md
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9672984Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251102.99
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9675158Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9677162Z ##[group]GITHUB_TOKEN Permissions
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9679981Z Contents: write
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9680900Z Metadata: read
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9681867Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9685031Z Secret source: Actions
+Sync melsec_mc	Set up job	2025-11-12T03:38:59.9686234Z Prepare workflow directory
+Sync melsec_mc	Set up job	2025-11-12T03:39:00.0142942Z Prepare all required actions
+Sync melsec_mc	Set up job	2025-11-12T03:39:00.0202629Z Getting action download info
+Sync melsec_mc	Set up job	2025-11-12T03:39:00.2989330Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+Sync melsec_mc	Set up job	2025-11-12T03:39:00.3970157Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Sync melsec_mc	Set up job	2025-11-12T03:39:00.5877136Z Complete job name: Sync melsec_mc
+Sync melsec_mc	Checkout source repo	・ｿ2025-11-12T03:39:00.6567105Z ##[group]Run actions/checkout@v4
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6567968Z with:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6568382Z   fetch-depth: 0
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6568841Z   persist-credentials: false
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6569347Z   repository: tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6569986Z   token: ***
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6570378Z   ssh-strict: true
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6570781Z   ssh-user: git
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6571161Z   clean: true
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6571733Z   sparse-checkout-cone-mode: true
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6572241Z   fetch-tags: false
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6572656Z   show-progress: true
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6573069Z   lfs: false
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6573446Z   submodules: false
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6573870Z   set-safe-directory: true
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.6574544Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7672193Z Syncing repository: tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7675000Z ##[group]Getting Git version info
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7676221Z Working directory is '/home/runner/work/melsec_com/melsec_com'
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7677873Z [command]/usr/bin/git version
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7737088Z git version 2.51.2
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7764285Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7779955Z Temporarily overriding HOME='/home/runner/work/_temp/443e911e-2562-4a1e-a08c-e8cca64ad7f6' before making global git config changes
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7782564Z Adding repository directory to the temporary git global config as a safe directory
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7794180Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/melsec_com/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7830788Z Deleting the contents of '/home/runner/work/melsec_com/melsec_com'
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7834911Z ##[group]Initializing the repository
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7839487Z [command]/usr/bin/git init /home/runner/work/melsec_com/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7938918Z hint: Using 'master' as the name for the initial branch. This default branch name
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7940256Z hint: is subject to change. To configure the initial branch name to use in all
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7941445Z hint: of your new repositories, which will suppress this warning, call:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7942732Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7943324Z hint: 	git config --global init.defaultBranch <name>
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7944367Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7945773Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7947361Z hint: 'development'. The just-created branch can be renamed via this command:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7948680Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7949391Z hint: 	git branch -m <name>
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7950140Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7951124Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7953076Z Initialized empty Git repository in /home/runner/work/melsec_com/melsec_com/.git/
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7955922Z [command]/usr/bin/git remote add origin https://github.com/tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7992319Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7993069Z ##[group]Disabling automatic garbage collection
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.7996324Z [command]/usr/bin/git config --local gc.auto 0
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8024488Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8025204Z ##[group]Setting up auth
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8030839Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8060003Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8387990Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8416359Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8636212Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8669815Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8670873Z ##[group]Fetching the repository
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:00.8686128Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3683336Z From https://github.com/tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3685099Z  * [new branch]      ci/add-sync-workflow -> origin/ci/add-sync-workflow
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3686695Z  * [new branch]      docs/readme-update   -> origin/docs/readme-update
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3688088Z  * [new branch]      main                 -> origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3689455Z  * [new branch]      sync/melsec_mc       -> origin/sync/melsec_mc
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3734242Z [command]/usr/bin/git branch --list --remote origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3760804Z   origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3773520Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3796124Z 917be9fe528ce2ddc44c419421243c4982051605
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3805541Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3806883Z ##[group]Determining the checkout info
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3808357Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3810975Z [command]/usr/bin/git sparse-checkout disable
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3871191Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3909117Z ##[group]Checking out the ref
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.3911099Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4148744Z Switched to a new branch 'main'
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4155413Z branch 'main' set up to track 'origin/main'.
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4165249Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4200689Z [command]/usr/bin/git log -1 --format=%H
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4224372Z 917be9fe528ce2ddc44c419421243c4982051605
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4234808Z ##[group]Removing auth
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4239712Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4270069Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4522219Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4545249Z http.https://github.com/.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4555853Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4591095Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T03:39:01.4837682Z ##[endgroup]
+Sync melsec_mc	Prepare	・ｿ2025-11-12T03:39:01.5092135Z ##[group]Run git config --global user.name "github-actions[bot]"
+Sync melsec_mc	Prepare	2025-11-12T03:39:01.5094282Z [36;1mgit config --global user.name "github-actions[bot]"[0m
+Sync melsec_mc	Prepare	2025-11-12T03:39:01.5096654Z [36;1mgit config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"[0m
+Sync melsec_mc	Prepare	2025-11-12T03:39:01.5139646Z shell: /usr/bin/bash -e {0}
+Sync melsec_mc	Prepare	2025-11-12T03:39:01.5140782Z ##[endgroup]
+Sync melsec_mc	Clone target repo	・ｿ2025-11-12T03:39:01.5343310Z ##[group]Run if [ -z "${SYNC_PAT}" ]; then
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5344718Z [36;1mif [ -z "${SYNC_PAT}" ]; then[0m
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5347031Z [36;1m  echo "ERROR: secret SYNC_PAT is not set. Please add a Personal Access Token with repo access to repository secrets."[0m
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5349287Z [36;1m  exit 1[0m
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5350147Z [36;1mfi[0m
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5351936Z [36;1mgit clone "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" target[0m
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5353915Z [36;1mgit -C target fetch origin --prune[0m
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5387886Z shell: /usr/bin/bash -e {0}
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5388887Z env:
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5391012Z   SYNC_PAT: ***
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5392093Z ##[endgroup]
+Sync melsec_mc	Clone target repo	2025-11-12T03:39:01.5472208Z Cloning into 'target'...
+Sync melsec_mc	Copy melsec_mc files	・ｿ2025-11-12T03:39:01.8243179Z ##[group]Run # working-directory is 'target' (the cloned tyaro/melsec_mc repo)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8245336Z [36;1m# working-directory is 'target' (the cloned tyaro/melsec_mc repo)[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8247178Z [36;1m# ensure we always capture push traces even if git push fails[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8248627Z [36;1mset -o pipefail[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8249574Z [36;1mtouch push-trace.log[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8250894Z [36;1mecho "=== push-trace started: $(date -u) ===" >> push-trace.log[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8252568Z [36;1mecho "DEBUG: current dir: $(pwd)"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8254054Z [36;1mecho "DEBUG: git remote before set-url:" && git remote -v || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8256279Z [36;1mgit remote set-url origin "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8258578Z [36;1mecho "DEBUG: git remote after set-url:" && git remote -v || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8260703Z [36;1m# ensure the checked-out source repo is not shallow (avoid missing objects when packing)[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8263293Z [36;1mecho "DEBUG: ensure source checkout is unshallowed if needed" >> push-trace.log[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8265255Z [36;1m# the source checkout lives one level up from 'target'[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8267009Z [36;1mif git -C .. rev-parse --is-shallow-repository >/dev/null 2>&1; then[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8268823Z [36;1m  IS_SHALLOW=$(git -C .. rev-parse --is-shallow-repository)[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8270286Z [36;1m  if [ "$IS_SHALLOW" = "true" ]; then[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8272420Z [36;1m    echo "source repo is shallow; running git fetch --unshallow" >> push-trace.log || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8274328Z [36;1m    git -C .. fetch --prune --unshallow || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8275505Z [36;1m  fi[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8276254Z [36;1mfi[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8277361Z [36;1m# copy source files from the checked-out repo into this clone[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8278850Z [36;1mrsync -a --delete ../melsec_mc/ .[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8279988Z [36;1mBRANCH=sync/melsec_mc[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8281394Z [36;1mecho "DEBUG: branches (local and remote):" && git branch -a || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8283610Z [36;1m# try to base the branch on origin if it exists, otherwise create new local branch[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8285871Z [36;1mif git show-ref --verify --quiet refs/remotes/origin/${BRANCH}; then[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8287537Z [36;1m  git checkout -B ${BRANCH} origin/${BRANCH}[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8288704Z [36;1melse[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8289525Z [36;1m  git checkout -B ${BRANCH}[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8290538Z [36;1mfi[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8291844Z [36;1mecho "DEBUG: branch after checkout:" && git branch -vv || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8293751Z [36;1mecho "DEBUG: git status (porcelain):" && git status --porcelain || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8295868Z [36;1mecho "DEBUG: ls-remote origin for branch:" && git ls-remote origin ${BRANCH} || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8297664Z [36;1mif [ -n "$(git status --porcelain)" ]; then[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8298840Z [36;1m  git add .[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8300173Z [36;1m  git commit -m "sync: update melsec_mc from tyaro/melsec_com ${GITHUB_SHA}"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8302243Z [36;1m  echo "DEBUG: clearing http extraheader and credential helper"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8304225Z [36;1m  git config --local --unset-all http.https://github.com/.extraheader || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8306179Z [36;1m  git config --local --unset-all credential.helper || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8307929Z [36;1m  echo "DEBUG: pushing to explicit PAT URL (with retries/backoff)"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8309714Z [36;1m  # retry with linear backoff: attempts=5, sleep = i*8 seconds[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8311122Z [36;1m  for i in 1 2 3 4 5; do[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8312768Z [36;1m    # capture detailed git traces to push-trace.log for debugging[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8314447Z [36;1m    GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8317079Z [36;1m      git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force 2>&1 | tee -a push-trace.log[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8319336Z [36;1m    if [ ${PIPESTATUS[0]} -eq 0 ]; then[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8320502Z [36;1m      echo "push succeeded"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8321527Z [36;1m      break[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8322496Z [36;1m    else[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8323382Z [36;1m      echo "push failed, retrying ($i)"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8324977Z [36;1m      # wait ~30 seconds between retries to reduce transient remote conflicts[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8326502Z [36;1m      sleep 30[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8327353Z [36;1m    fi[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8328097Z [36;1m  done[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8329076Z [36;1m  echo "PUSHED_BRANCH=${BRANCH}" >> $GITHUB_OUTPUT[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8330294Z [36;1melse[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8331404Z [36;1m  echo "DEBUG: nothing to commit, ensure branch exists on remote"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8333466Z [36;1m  git config --local --unset-all http.https://github.com/.extraheader || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8335383Z [36;1m  git config --local --unset-all credential.helper || true[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8337081Z [36;1m  # ensure we don't mask failures with '|| true' and use same backoff[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8338582Z [36;1m  for i in 1 2 3 4 5; do[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8339919Z [36;1m    # capture detailed git traces to push-trace.log for debugging[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8341805Z [36;1m    # force the push to ensure the sync branch on target is overwritten[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8343456Z [36;1m    GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_CURL_VERBOSE=1 \[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8345771Z [36;1m      git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" ${BRANCH} --force 2>&1 | tee -a push-trace.log[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8348070Z [36;1m    if [ ${PIPESTATUS[0]} -eq 0 ]; then[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8349370Z [36;1m      echo "push (forced) succeeded or branch exists"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8350581Z [36;1m      break[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8351355Z [36;1m    else[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8352333Z [36;1m      echo "push failed, retrying ($i)"[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8353528Z [36;1m      # wait ~30 seconds between retries[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8354613Z [36;1m      sleep 30[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8355605Z [36;1m    fi[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8356348Z [36;1m  done[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8357312Z [36;1m  echo "PUSHED_BRANCH=${BRANCH}" >> $GITHUB_OUTPUT[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8358497Z [36;1mfi[0m
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8391492Z shell: /usr/bin/bash -e {0}
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8392525Z env:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8394360Z   SYNC_PAT: ***
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8395135Z ##[endgroup]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8480295Z DEBUG: current dir: /home/runner/work/melsec_com/melsec_com/target
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8481948Z DEBUG: git remote before set-url:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8495116Z origin	***github.com/tyaro/melsec_mc.git (fetch)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8498228Z origin	***github.com/tyaro/melsec_mc.git (push)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8511016Z DEBUG: git remote after set-url:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8526217Z origin	***github.com/tyaro/melsec_mc.git (fetch)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.8529887Z origin	***github.com/tyaro/melsec_mc.git (push)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9263856Z DEBUG: branches (local and remote):
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9280899Z * main
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9282432Z   remotes/origin/ci/add-sync-workflow
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9283574Z   remotes/origin/docs/readme-update
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9285003Z   remotes/origin/main
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9286411Z   remotes/origin/sync/melsec_mc
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9420578Z Switched to a new branch 'sync/melsec_mc'
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9423621Z branch 'sync/melsec_mc' set up to track 'origin/sync/melsec_mc'.
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9428416Z DEBUG: branch after checkout:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9447799Z   main           917be9f [origin/main] ci: touch .sync-trigger to retrigger sync (2025-11-12T12:38:52.1438269+09:00)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9450220Z * sync/melsec_mc a60870e [origin/sync/melsec_mc] ci: trigger sync after workflow fix
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9452083Z DEBUG: git status (porcelain):
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:01.9562540Z DEBUG: ls-remote origin for branch:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0524454Z a60870e4bc9d86cb4b99bec6c232caa59d7ce496	refs/heads/sync/melsec_mc
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0648117Z DEBUG: nothing to commit, ensure branch exists on remote
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0695736Z 03:39:02.069104 git.c:502               trace: built-in: git push ***github.com/tyaro/melsec_mc.git sync/melsec_mc --force
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0704972Z 03:39:02.069841 run-command.c:673       trace: run_command: GIT_DIR=.git git remote-https ***github.com/tyaro/melsec_mc.git ***github.com/tyaro/melsec_mc.git
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0711075Z 03:39:02.069858 run-command.c:765       trace: start_command: /usr/lib/git-core/git remote-https ***github.com/tyaro/melsec_mc.git ***github.com/tyaro/melsec_mc.git
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0719296Z 03:39:02.071054 git.c:806               trace: exec: git-remote-https ***github.com/tyaro/melsec_mc.git ***github.com/tyaro/melsec_mc.git
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0724856Z 03:39:02.071085 run-command.c:673       trace: run_command: git-remote-https ***github.com/tyaro/melsec_mc.git ***github.com/tyaro/melsec_mc.git
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0730414Z 03:39:02.071099 run-command.c:765       trace: start_command: /usr/lib/git-core/git-remote-https ***github.com/tyaro/melsec_mc.git ***github.com/tyaro/melsec_mc.git
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0774858Z 03:39:02.077306 http.c:890              == Info: Host github.com:443 was resolved.
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0776467Z 03:39:02.077334 http.c:890              == Info: IPv6: (none)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0778046Z 03:39:02.077337 http.c:890              == Info: IPv4: 140.82.114.4
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0779689Z 03:39:02.077356 http.c:890              == Info:   Trying 140.82.114.4:443...
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.0828611Z 03:39:02.082690 http.c:890              == Info: Connected to github.com (140.82.114.4) port 443
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1108887Z 03:39:02.110598 http.c:890              == Info: found 440 certificates in /etc/ssl/certs
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1111851Z 03:39:02.110663 http.c:890              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1114079Z 03:39:02.110702 http.c:890              == Info: ALPN: curl offers h2,http/1.1
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1188203Z 03:39:02.118538 http.c:890              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1208429Z 03:39:02.120661 http.c:890              == Info:   server certificate verification OK
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1210893Z 03:39:02.120671 http.c:890              == Info:   server certificate status verification SKIPPED
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1213329Z 03:39:02.120754 http.c:890              == Info:   common name: github.com (matched)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1215049Z 03:39:02.120760 http.c:890              == Info:   server certificate expiration date OK
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1216535Z 03:39:02.120763 http.c:890              == Info:   server certificate activation date OK
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1217992Z 03:39:02.120771 http.c:890              == Info:   certificate public key: EC/ECDSA
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1219410Z 03:39:02.120773 http.c:890              == Info:   certificate version: #3
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1220763Z 03:39:02.120782 http.c:890              == Info:   subject: CN=github.com
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1222416Z 03:39:02.120792 http.c:890              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1223894Z 03:39:02.120796 http.c:890              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1226000Z 03:39:02.120821 http.c:890              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1228030Z 03:39:02.120833 http.c:890              == Info: ALPN: server accepted h2
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1229351Z 03:39:02.120890 http.c:890              == Info: using HTTP/2
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1232998Z 03:39:02.120956 http.c:890              == Info: [HTTP/2] [1] OPENED stream for ***github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1235111Z 03:39:02.120962 http.c:890              == Info: [HTTP/2] [1] [:method: GET]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1236463Z 03:39:02.120965 http.c:890              == Info: [HTTP/2] [1] [:scheme: https]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1237859Z 03:39:02.120968 http.c:890              == Info: [HTTP/2] [1] [:authority: github.com]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1239580Z 03:39:02.120970 http.c:890              == Info: [HTTP/2] [1] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1241291Z 03:39:02.120973 http.c:890              == Info: [HTTP/2] [1] [user-agent: git/2.51.2]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1242871Z 03:39:02.120982 http.c:890              == Info: [HTTP/2] [1] [accept: */*]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1244376Z 03:39:02.120985 http.c:890              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1245969Z 03:39:02.120987 http.c:890              == Info: [HTTP/2] [1] [accept-language: C, *;q=0.9]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1308752Z 03:39:02.120990 http.c:890              == Info: [HTTP/2] [1] [pragma: no-cache]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1310337Z 03:39:02.121018 http.c:837              => Send header, 0000000214 bytes (0x000000d6)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1312380Z 03:39:02.121022 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1314172Z 03:39:02.121024 http.c:849              => Send header: Host: github.com
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1315573Z 03:39:02.121026 http.c:849              => Send header: User-Agent: git/2.51.2
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1316933Z 03:39:02.121028 http.c:849              => Send header: Accept: */*
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1318426Z 03:39:02.121030 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1320035Z 03:39:02.121031 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1321457Z 03:39:02.121033 http.c:849              => Send header: Pragma: no-cache
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1322825Z 03:39:02.121035 http.c:849              => Send header:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1410554Z 03:39:02.140859 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1412540Z 03:39:02.140870 http.c:849              <= Recv header: HTTP/2 401
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1414150Z 03:39:02.140875 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1415581Z 03:39:02.140877 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1417083Z 03:39:02.140879 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1418735Z 03:39:02.140882 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1420353Z 03:39:02.140884 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1422149Z 03:39:02.140885 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1423706Z 03:39:02.140887 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1425206Z 03:39:02.140888 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1426693Z 03:39:02.140892 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1428088Z 03:39:02.140893 http.c:849              <= Recv header: content-length: 26
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1429462Z 03:39:02.140894 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1430888Z 03:39:02.140896 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 03:39:02 GMT
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1432787Z 03:39:02.140897 http.c:837              <= Recv header, 0000000059 bytes (0x0000003b)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1434461Z 03:39:02.140898 http.c:849              <= Recv header: x-github-request-id: 5C24:2C26E4:391BA0B:4C10632:69140156
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1436078Z 03:39:02.140900 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1437677Z 03:39:02.140901 http.c:849              <= Recv header: x-frame-options: DENY
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1439071Z 03:39:02.140903 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1440906Z 03:39:02.140905 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1442819Z 03:39:02.140907 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1444077Z 03:39:02.140908 http.c:849              <= Recv header:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1445321Z 03:39:02.140910 http.c:890              == Info: Ignoring the response-body
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1446759Z 03:39:02.140918 http.c:890              == Info: Connection #0 to host github.com left intact
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1450323Z 03:39:02.140937 http.c:890              == Info: Issue another request to this URL: '***github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack'
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1452555Z 03:39:02.140966 http.c:890              == Info: Found bundle for host: 0x559093f5bd30 [can multiplex]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1454185Z 03:39:02.140972 http.c:890              == Info: Re-using existing connection with host github.com
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1455792Z 03:39:02.140985 http.c:890              == Info: Server auth using Basic with user 'x-access-token'
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1459153Z 03:39:02.141007 http.c:890              == Info: [HTTP/2] [3] OPENED stream for ***github.com/tyaro/melsec_mc.git/info/refs?service=git-receive-pack
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1460991Z 03:39:02.141011 http.c:890              == Info: [HTTP/2] [3] [:method: GET]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1462588Z 03:39:02.141013 http.c:890              == Info: [HTTP/2] [3] [:scheme: https]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1463961Z 03:39:02.141015 http.c:890              == Info: [HTTP/2] [3] [:authority: github.com]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1465655Z 03:39:02.141018 http.c:890              == Info: [HTTP/2] [3] [:path: /tyaro/melsec_mc.git/info/refs?service=git-receive-pack]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1467403Z 03:39:02.141021 http.c:890              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1468846Z 03:39:02.141023 http.c:890              == Info: [HTTP/2] [3] [user-agent: git/2.51.2]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1470385Z 03:39:02.141025 http.c:890              == Info: [HTTP/2] [3] [accept: */*]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1472069Z 03:39:02.141027 http.c:890              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1473605Z 03:39:02.141029 http.c:890              == Info: [HTTP/2] [3] [accept-language: C, *;q=0.9]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1475010Z 03:39:02.141032 http.c:890              == Info: [HTTP/2] [3] [pragma: no-cache]
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1476376Z 03:39:02.141061 http.c:837              => Send header, 0000000381 bytes (0x0000017d)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1478062Z 03:39:02.141065 http.c:849              => Send header: GET /tyaro/melsec_mc.git/info/refs?service=git-receive-pack HTTP/2
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1479722Z 03:39:02.141067 http.c:849              => Send header: Host: github.com
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1481094Z 03:39:02.141069 http.c:849              => Send header: Authorization: Basic <redacted>
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1482600Z 03:39:02.141071 http.c:849              => Send header: User-Agent: git/2.51.2
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1483917Z 03:39:02.141072 http.c:849              => Send header: Accept: */*
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1485316Z 03:39:02.141074 http.c:849              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1486784Z 03:39:02.141078 http.c:849              => Send header: Accept-Language: C, *;q=0.9
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1488133Z 03:39:02.141079 http.c:849              => Send header: Pragma: no-cache
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1489323Z 03:39:02.141081 http.c:849              => Send header:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1617565Z 03:39:02.161490 http.c:837              <= Recv header, 0000000013 bytes (0x0000000d)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1620286Z 03:39:02.161501 http.c:849              <= Recv header: HTTP/2 401
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1623387Z 03:39:02.161507 http.c:837              <= Recv header, 0000000026 bytes (0x0000001a)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1626192Z 03:39:02.161508 http.c:849              <= Recv header: server: GitHub-Babel/3.0
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1628563Z 03:39:02.161511 http.c:837              <= Recv header, 0000000054 bytes (0x00000036)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1631241Z 03:39:02.161512 http.c:849              <= Recv header: content-security-policy: default-src 'none'; sandbox
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1634029Z 03:39:02.161515 http.c:837              <= Recv header, 0000000041 bytes (0x00000029)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1635992Z 03:39:02.161517 http.c:849              <= Recv header: content-type: text/plain; charset=UTF-8
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1637557Z 03:39:02.161519 http.c:890              == Info: Authentication problem. Ignoring this.
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1639964Z 03:39:02.161522 http.c:837              <= Recv header, 0000000040 bytes (0x00000028)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1642516Z 03:39:02.161523 http.c:849              <= Recv header: www-authenticate: Basic realm="GitHub"
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1644152Z 03:39:02.161526 http.c:837              <= Recv header, 0000000020 bytes (0x00000014)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1646348Z 03:39:02.161528 http.c:849              <= Recv header: content-length: 87
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1648891Z 03:39:02.161530 http.c:837              <= Recv header, 0000000037 bytes (0x00000025)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1650693Z 03:39:02.161532 http.c:849              <= Recv header: date: Wed, 12 Nov 2025 03:39:02 GMT
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1652316Z 03:39:02.161535 http.c:837              <= Recv header, 0000000059 bytes (0x0000003b)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1653909Z 03:39:02.161536 http.c:849              <= Recv header: x-github-request-id: 5C24:2C26E4:391BA27:4C10659:69140156
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1655486Z 03:39:02.161538 http.c:837              <= Recv header, 0000000023 bytes (0x00000017)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1656848Z 03:39:02.161540 http.c:849              <= Recv header: x-frame-options: DENY
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1658209Z 03:39:02.161541 http.c:837              <= Recv header, 0000000073 bytes (0x00000049)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1659980Z 03:39:02.161543 http.c:849              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1662115Z 03:39:02.161545 http.c:837              <= Recv header, 0000000002 bytes (0x00000002)
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1663340Z 03:39:02.161546 http.c:849              <= Recv header:
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1664627Z 03:39:02.161554 http.c:890              == Info: Connection #0 to host github.com left intact
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1666376Z remote: Invalid username or token. Password authentication is not supported for Git operations.
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1668151Z fatal: Authentication failed for 'https://github.com/tyaro/melsec_mc.git/'
+Sync melsec_mc	Copy melsec_mc files	2025-11-12T03:39:02.1680183Z ##[error]Process completed with exit code 128.
+Sync melsec_mc	Ensure push trace exists	・ｿ2025-11-12T03:39:02.1777664Z ##[group]Run # the push step writes push-trace.log in the 'target' working directory
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1779328Z [36;1m# the push step writes push-trace.log in the 'target' working directory[0m
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1780627Z [36;1mif [ -f target/push-trace.log ]; then[0m
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1781838Z [36;1m  echo "push trace found"[0m
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1782713Z [36;1melse[0m
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1783632Z [36;1m  echo "no push trace generated" > target/push-trace.log[0m
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1784683Z [36;1mfi[0m
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1817966Z shell: /usr/bin/bash -e {0}
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1818820Z ##[endgroup]
+Sync melsec_mc	Ensure push trace exists	2025-11-12T03:39:02.1876298Z push trace found
+Sync melsec_mc	Upload push trace	・ｿ2025-11-12T03:39:02.1967943Z ##[group]Run actions/upload-artifact@v4
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1968895Z with:
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1969564Z   name: push-trace
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1970328Z   path: target/push-trace.log
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1971168Z   if-no-files-found: warn
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1972225Z   compression-level: 6
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1972995Z   overwrite: false
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1973735Z   include-hidden-files: false
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.1974546Z ##[endgroup]
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.4134996Z With the provided path, there will be 1 file uploaded
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.4139922Z Artifact name is valid!
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.4141266Z Root directory input is valid!
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.5393454Z Beginning upload of artifact content to blob storage
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.6469958Z Uploaded bytes 2490
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.6780892Z Finished uploading artifact content to blob storage!
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.6784055Z SHA256 digest of uploaded artifact zip is c67a2b1aec3880a8c2ae8dac38fd96a20448b9c55bc0ddde76bdaf7b9b40d176
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.6786265Z Finalizing artifact upload
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.7659110Z Artifact push-trace.zip successfully finalized. Artifact ID 4538693733
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.7673746Z Artifact push-trace has been successfully uploaded! Final size is 2490 bytes. Artifact ID is 4538693733
+Sync melsec_mc	Upload push trace	2025-11-12T03:39:02.7675087Z Artifact download URL: https://github.com/tyaro/melsec_com/actions/runs/19285570791/artifacts/4538693733
+Sync melsec_mc	Post Checkout source repo	・ｿ2025-11-12T03:39:02.7829532Z Post job cleanup.
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8779519Z [command]/usr/bin/git version
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8815203Z git version 2.51.2
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8851426Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/6c5d28cf-1007-4103-bda3-d70cffd97ad8/.gitconfig'
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8860514Z Temporarily overriding HOME='/home/runner/work/_temp/6c5d28cf-1007-4103-bda3-d70cffd97ad8' before making global git config changes
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8861814Z Adding repository directory to the temporary git global config as a safe directory
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8874893Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/melsec_com/melsec_com
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8909765Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.8941962Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.9168820Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Sync melsec_mc	Post Checkout source repo	2025-11-12T03:39:02.9201380Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Sync melsec_mc	Complete job	・ｿ2025-11-12T03:39:02.9531179Z Cleaning up orphan processes

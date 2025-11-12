@@ -1,0 +1,190 @@
+Sync melsec_mc	Set up job	﻿2025-11-12T13:43:17.7299395Z Current runner version: '2.329.0'
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7324775Z ##[group]Runner Image Provisioner
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7325723Z Hosted Compute Agent
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7326317Z Version: 20251016.436
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7326920Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7327699Z Build Date: 2025-10-15T20:44:12Z
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7328327Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7328878Z ##[group]Operating System
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7329515Z Ubuntu
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7330178Z 24.04.3
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7330614Z LTS
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7331153Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7331630Z ##[group]Runner Image
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7332242Z Image: ubuntu-24.04
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7332830Z Version: 20251102.99.1
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7333798Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251102.99/images/ubuntu/Ubuntu2404-Readme.md
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7335156Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251102.99
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7336424Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7337486Z ##[group]GITHUB_TOKEN Permissions
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7339607Z Contents: write
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7340347Z Metadata: read
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7340912Z ##[endgroup]
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7343014Z Secret source: Actions
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.7343724Z Prepare workflow directory
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.8049746Z Prepare all required actions
+Sync melsec_mc	Set up job	2025-11-12T13:43:17.8105642Z Getting action download info
+Sync melsec_mc	Set up job	2025-11-12T13:43:18.2717279Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+Sync melsec_mc	Set up job	2025-11-12T13:43:18.3795495Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Sync melsec_mc	Set up job	2025-11-12T13:43:18.5611943Z Complete job name: Sync melsec_mc
+Sync melsec_mc	Checkout source repo	﻿2025-11-12T13:43:18.6225931Z ##[group]Run actions/checkout@v4
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6226788Z with:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6227218Z   fetch-depth: 0
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6227657Z   persist-credentials: false
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6228152Z   repository: tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6228811Z   token: ***
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6229205Z   ssh-strict: true
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6229613Z   ssh-user: git
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6230291Z   clean: true
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6230722Z   sparse-checkout-cone-mode: true
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6231232Z   fetch-tags: false
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6231653Z   show-progress: true
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6232075Z   lfs: false
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6232463Z   submodules: false
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6232897Z   set-safe-directory: true
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6233595Z env:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6234451Z   SYNC_PAT: ***
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6234846Z   DRY_RUN: 0
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.6235226Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7315890Z Syncing repository: tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7317592Z ##[group]Getting Git version info
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7318647Z Working directory is '/home/runner/work/melsec_com/melsec_com'
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7319603Z [command]/usr/bin/git version
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7432055Z git version 2.51.2
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7459180Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7475922Z Temporarily overriding HOME='/home/runner/work/_temp/202b1b62-b116-47cc-9dd7-4ec29d82b4a3' before making global git config changes
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7478336Z Adding repository directory to the temporary git global config as a safe directory
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7490553Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/melsec_com/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7529193Z Deleting the contents of '/home/runner/work/melsec_com/melsec_com'
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7533802Z ##[group]Initializing the repository
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7538583Z [command]/usr/bin/git init /home/runner/work/melsec_com/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7653409Z hint: Using 'master' as the name for the initial branch. This default branch name
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7654946Z hint: is subject to change. To configure the initial branch name to use in all
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7656722Z hint: of your new repositories, which will suppress this warning, call:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7657844Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7658902Z hint: 	git config --global init.defaultBranch <name>
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7659708Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7660566Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7661464Z hint: 'development'. The just-created branch can be renamed via this command:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7662155Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7662551Z hint: 	git branch -m <name>
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7663033Z hint:
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7663928Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7665047Z Initialized empty Git repository in /home/runner/work/melsec_com/melsec_com/.git/
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7669406Z [command]/usr/bin/git remote add origin https://github.com/tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7703652Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7704427Z ##[group]Disabling automatic garbage collection
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7707357Z [command]/usr/bin/git config --local gc.auto 0
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7735657Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7736388Z ##[group]Setting up auth
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7742408Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.7772966Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.8154748Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.8190688Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.8438005Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.8484761Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.8486185Z ##[group]Fetching the repository
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:18.8509279Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4121746Z From https://github.com/tyaro/melsec_com
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4123397Z  * [new branch]      add/push-trace        -> origin/add/push-trace
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4124667Z  * [new branch]      ci/add-sync-workflow  -> origin/ci/add-sync-workflow
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4125748Z  * [new branch]      ci/commit-lockfile-before-publish -> origin/ci/commit-lockfile-before-publish
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4126844Z  * [new branch]      ci/sync-workflow-cleanup -> origin/ci/sync-workflow-cleanup
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4174318Z  * [new branch]      docs/readme-update    -> origin/docs/readme-update
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4175855Z  * [new branch]      fix/sync-backoff      -> origin/fix/sync-backoff
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4177259Z  * [new branch]      main                  -> origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4178507Z  * [new branch]      sync/melsec_mc        -> origin/sync/melsec_mc
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4180082Z  * [new branch]      tmp/fix-sync-workflow -> origin/tmp/fix-sync-workflow
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4183764Z [command]/usr/bin/git branch --list --remote origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4209351Z   origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4219754Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4241509Z 43fcda8a47aa87312d19613826a36e89fc8e8a5e
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4248337Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4250435Z ##[group]Determining the checkout info
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4253782Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4255054Z [command]/usr/bin/git sparse-checkout disable
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4298164Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4325423Z ##[group]Checking out the ref
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4328601Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4487166Z Switched to a new branch 'main'
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4490223Z branch 'main' set up to track 'origin/main'.
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4498081Z ##[endgroup]
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4531506Z [command]/usr/bin/git log -1 --format=%H
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4552784Z 43fcda8a47aa87312d19613826a36e89fc8e8a5e
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4562831Z ##[group]Removing auth
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4567327Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4598799Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4825036Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4846576Z http.https://github.com/.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4855216Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.4890989Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Sync melsec_mc	Checkout source repo	2025-11-12T13:43:19.5109107Z ##[endgroup]
+Sync melsec_mc	Run sync script (respects DRY_RUN)	﻿2025-11-12T13:43:19.5296389Z ##[group]Run chmod +x ./.github/scripts/sync-run.sh
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5297551Z [36;1mchmod +x ./.github/scripts/sync-run.sh[0m
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5298446Z [36;1mecho "DRY_RUN=$DRY_RUN"[0m
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5299376Z [36;1mDRY_RUN=${DRY_RUN} ./.github/scripts/sync-run.sh || true[0m
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5335693Z shell: /usr/bin/bash -e {0}
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5336366Z env:
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5337962Z   SYNC_PAT: ***
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5338457Z   DRY_RUN: 0
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5338900Z ##[endgroup]
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5425473Z DRY_RUN=0
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:19.5468614Z Cloning into 'target'...
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7130125Z From https://github.com/tyaro/melsec_com
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7130886Z  * branch            main       -> FETCH_HEAD
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7319749Z Switched to a new branch 'sync/melsec_mc'
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7322602Z M	.github/scripts/sync-run.sh
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7323386Z branch 'sync/melsec_mc' set up to track 'origin/main'.
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7393368Z The following paths are ignored by one of your .gitignore files:
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7394079Z target
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7394404Z hint: Use -f if you really want to add them.
+Sync melsec_mc	Run sync script (respects DRY_RUN)	2025-11-12T13:43:20.7394990Z hint: Disable this message with "git config set advice.addIgnoredFile false"
+Sync melsec_mc	Copy push trace for upload	﻿2025-11-12T13:43:20.7439758Z ##[group]Run if [ -n "${PUSH_TRACE:-}" ] && [ -f "${PUSH_TRACE}" ]; then
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7440697Z [36;1mif [ -n "${PUSH_TRACE:-}" ] && [ -f "${PUSH_TRACE}" ]; then[0m
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7441262Z [36;1m  cp "${PUSH_TRACE}" "$GITHUB_WORKSPACE/push-trace-runtime.log" || true[0m
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7441700Z [36;1m  ls -l "$GITHUB_WORKSPACE/push-trace-runtime.log" || true[0m
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7442051Z [36;1melse[0m
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7442317Z [36;1m  echo "No push trace file to upload"[0m
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7442634Z [36;1mfi[0m
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7477018Z shell: /usr/bin/bash -e {0}
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7477328Z env:
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7478070Z   SYNC_PAT: ***
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7478310Z   DRY_RUN: 0
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7478607Z   PUSH_TRACE: /home/runner/work/_temp/push-trace-mv6l8z.log
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7478949Z ##[endgroup]
+Sync melsec_mc	Copy push trace for upload	2025-11-12T13:43:20.7562103Z -rw------- 1 runner runner 124 Nov 12 13:43 /home/runner/work/melsec_com/melsec_com/push-trace-runtime.log
+Sync melsec_mc	Upload push trace artifact	﻿2025-11-12T13:43:20.7619712Z ##[group]Run actions/upload-artifact@v4
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7620281Z with:
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7620502Z   name: push-trace
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7620757Z   path: push-trace-runtime.log
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7621028Z   if-no-files-found: warn
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7621278Z   compression-level: 6
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7621535Z   overwrite: false
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7621791Z   include-hidden-files: false
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7622046Z env:
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7622642Z   SYNC_PAT: ***
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7622874Z   DRY_RUN: 0
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7623165Z   PUSH_TRACE: /home/runner/work/_temp/push-trace-mv6l8z.log
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.7623757Z ##[endgroup]
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.9765082Z With the provided path, there will be 1 file uploaded
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.9770189Z Artifact name is valid!
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:20.9771632Z Root directory input is valid!
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.2772403Z Beginning upload of artifact content to blob storage
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.5931003Z Uploaded bytes 268
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.6759998Z Finished uploading artifact content to blob storage!
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.6762552Z SHA256 digest of uploaded artifact zip is 3ed2abe5a8498418c39e3f3653b9d0689afd06076fc0c2d7b0a0db47ac94f275
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.6764449Z Finalizing artifact upload
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.8665905Z Artifact push-trace.zip successfully finalized. Artifact ID 4543591175
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.8666802Z Artifact push-trace has been successfully uploaded! Final size is 268 bytes. Artifact ID is 4543591175
+Sync melsec_mc	Upload push trace artifact	2025-11-12T13:43:21.8673715Z Artifact download URL: https://github.com/tyaro/melsec_com/actions/runs/19299500080/artifacts/4543591175
+Sync melsec_mc	Post Checkout source repo	﻿2025-11-12T13:43:21.8881751Z Post job cleanup.
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9827656Z [command]/usr/bin/git version
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9864280Z git version 2.51.2
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9909218Z Temporarily overriding HOME='/home/runner/work/_temp/e18898ea-6c25-494b-966e-020f6214aa94' before making global git config changes
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9910684Z Adding repository directory to the temporary git global config as a safe directory
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9915833Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/melsec_com/melsec_com
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9952631Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:21.9986662Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:22.0213096Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Sync melsec_mc	Post Checkout source repo	2025-11-12T13:43:22.0247875Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Sync melsec_mc	Complete job	﻿2025-11-12T13:43:22.0593790Z Cleaning up orphan processes
