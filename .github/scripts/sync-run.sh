@@ -9,88 +9,81 @@ if [ "${DRY_RUN}" != "1" ] && [ -z "${SYNC_PAT:-}" ]; then
   exit 1
 fi
 
-# clone target repo into 'target' directory
-rm -rf target
-if [ "${DRY_RUN}" = "1" ]; then
-  # read-only clone for dry-run (no token)
-  git clone "https://github.com/tyaro/melsec_mc.git" target
-else
-  git clone "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" target
-fi
-cd target
-git fetch origin --prune
-
-# push trace file outside repo
-TMP_DIR="${RUNNER_TEMP:-/tmp}"
-mkdir -p "${TMP_DIR}"
-PUSH_TRACE="$(mktemp "$TMP_DIR/push-trace-XXXXXX.log")"
-chmod 600 "$PUSH_TRACE" || true
-echo "PUSH_TRACE=$PUSH_TRACE" >> "$GITHUB_ENV"
-echo "=== push-trace started: $(date -u) ===" >> "$PUSH_TRACE"
-
-echo "DEBUG: current dir: $(pwd)" >> "$PUSH_TRACE"
-
-# helper: create or update PR on target repo
 create_or_update_pr() {
-  if [ "${DRY_RUN}" = "1" ]; then
-    echo "DRY_RUN=1: skipping PR create/update" | tee -a "$PUSH_TRACE"
-    return
-  fi
-  OWNER="tyaro"
-  REPO="melsec_mc"
-  HEAD_BRANCH="${BRANCH}"
-  BASE="main"
-  TITLE="sync: update melsec_mc from tyaro/melsec_com ${GITHUB_SHA}"
-  BODY="Automated sync from tyaro/melsec_com (${GITHUB_SHA}). See push-trace for details."
-
-  echo "Checking for existing PR (head=${OWNER}:${HEAD_BRANCH}, base=${BASE})" | tee -a "$PUSH_TRACE"
-
-  # Prefer gh CLI if available
-  if command -v gh >/dev/null 2>&1; then
-    echo "Using gh CLI for PR operations" | tee -a "$PUSH_TRACE"
-    # authenticate gh with SYNC_PAT (non-interactive)
-    echo "$SYNC_PAT" | gh auth login --with-token 2>&1 | tee -a "$PUSH_TRACE" || true
-
-    existing_pr=$(gh pr list --repo ${OWNER}/${REPO} --head ${OWNER}:${HEAD_BRANCH} --base ${BASE} --state open --json number,url -q '.[0].number' 2>/dev/null || true)
-    if [ -n "$existing_pr" ]; then
-      echo "Found existing PR #${existing_pr} via gh — editing" | tee -a "$PUSH_TRACE"
-      gh pr edit ${existing_pr} --repo ${OWNER}/${REPO} --title "$TITLE" --body "$BODY" 2>&1 | tee -a "$PUSH_TRACE" || true
-      pr_url=$(gh pr view ${existing_pr} --repo ${OWNER}/${REPO} --json url -q '.url' 2>/dev/null || true)
-      echo "PR_NUMBER=${existing_pr}" >> "$GITHUB_OUTPUT" || true
-      [ -n "$pr_url" ] && echo "PR_URL=${pr_url}" >> "$GITHUB_OUTPUT" || true
-    else
-      echo "No existing PR found via gh — creating" | tee -a "$PUSH_TRACE"
-      pr_url=$(gh pr create --repo ${OWNER}/${REPO} --title "$TITLE" --body "$BODY" --base ${BASE} --head ${OWNER}:${HEAD_BRANCH} --json url,number 2>&1 | tee -a "$PUSH_TRACE" | jq -r '.url') || true
-      pr_num=$(gh pr list --repo ${OWNER}/${REPO} --head ${OWNER}:${HEAD_BRANCH} --state open --json number -q '.[0].number' 2>/dev/null || true)
-      [ -n "$pr_url" ] && echo "PR_URL=${pr_url}" >> "$GITHUB_OUTPUT" || true
-      [ -n "$pr_num" ] && echo "PR_NUMBER=${pr_num}" >> "$GITHUB_OUTPUT" || true
-      echo "Created PR: ${pr_url} (#${pr_num})" | tee -a "$PUSH_TRACE"
+    if [ "${DRY_RUN}" = "1" ]; then
+      echo "DRY_RUN=1: skipping PR create/update" | tee -a "$PUSH_TRACE"
+      return
     fi
-  else
-    # Fallback to manual GitHub API via curl (existing behavior)
-    echo "gh not available; falling back to curl API" | tee -a "$PUSH_TRACE"
-    if command -v jq >/dev/null 2>&1; then
-      existing_pr_json=$(curl -sS -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
-        "https://api.github.com/repos/${OWNER}/${REPO}/pulls?head=${OWNER}:${HEAD_BRANCH}&base=${BASE}&state=open" 2>&1 | tee -a "$PUSH_TRACE" ) || true
-      existing_pr=$(echo "$existing_pr_json" | jq -r '.[0].number // empty' || true)
-    else
-      existing_pr_json=$(curl -sS -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
-        "https://api.github.com/repos/${OWNER}/${REPO}/pulls?head=${OWNER}:${HEAD_BRANCH}&base=${BASE}&state=open" 2>&1 | tee -a "$PUSH_TRACE" ) || true
-      existing_pr=$(echo "$existing_pr_json" | grep -o '"number": [0-9]*' | head -1 | grep -o '[0-9]*' || true)
-    fi
+    OWNER="tyaro"
+    REPO="melsec_mc"
+    HEAD_BRANCH="${BRANCH}"
+    BASE="main"
+    TITLE="sync: update melsec_mc from tyaro/melsec_com ${GITHUB_SHA}"
+    BODY="Automated sync from tyaro/melsec_com (${GITHUB_SHA}). See push-trace for details."
 
-    if [ -n "$existing_pr" ]; then
-      echo "Found existing PR #$existing_pr — updating title/body" | tee -a "$PUSH_TRACE"
-      if command -v jq >/dev/null 2>&1; then
-        curl -sS -X PATCH -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
-          "https://api.github.com/repos/${OWNER}/${REPO}/pulls/${existing_pr}" \
-          -d "$(jq -n --arg t "$TITLE" --arg b "$BODY" '{title:$t, body:$b}')" 2>&1 | tee -a "$PUSH_TRACE" || true
+    echo "Checking for existing PR (head=${OWNER}:${HEAD_BRANCH}, base=${BASE})" | tee -a "$PUSH_TRACE"
+
+    # Prefer gh CLI if available
+    if command -v gh >/dev/null 2>&1; then
+      echo "Using gh CLI for PR operations" | tee -a "$PUSH_TRACE"
+      # authenticate gh with SYNC_PAT (non-interactive)
+      echo "$SYNC_PAT" | gh auth login --with-token 2>&1 | tee -a "$PUSH_TRACE" || true
+      gh --version 2>&1 | tee -a "$PUSH_TRACE" || true
+      gh auth status 2>&1 | tee -a "$PUSH_TRACE" || true
+
+      # Check for existing open PR
+      existing_pr=$(gh pr list --repo ${OWNER}/${REPO} --head ${OWNER}:${HEAD_BRANCH} --base ${BASE} --state open --json number -q '.[0].number' 2>/dev/null || true)
+      if [ -n "$existing_pr" ]; then
+        echo "Found existing PR #${existing_pr} via gh — editing" | tee -a "$PUSH_TRACE"
+        gh pr edit ${existing_pr} --repo ${OWNER}/${REPO} --title "$TITLE" --body "$BODY" 2>&1 | tee -a "$PUSH_TRACE" || true
+        pr_url=$(gh pr view ${existing_pr} --repo ${OWNER}/${REPO} --json url -q '.url' 2>/dev/null || true)
+        echo "PR_NUMBER=${existing_pr}" >> "$GITHUB_OUTPUT" || true
+        [ -n "$pr_url" ] && echo "PR_URL=${pr_url}" >> "$GITHUB_OUTPUT" || true
       else
-        curl -sS -X PATCH -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
-          "https://api.github.com/repos/${OWNER}/${REPO}/pulls/${existing_pr}" \
-          -d "{\"title\": \"${TITLE}\", \"body\": \"${BODY}\"}" 2>&1 | tee -a "$PUSH_TRACE" || true
+        echo "No existing PR found via gh — creating" | tee -a "$PUSH_TRACE"
+        # capture gh output (json or error) into the push-trace and extract fields if possible
+        pr_json=$(gh pr create --repo ${OWNER}/${REPO} --title "$TITLE" --body "$BODY" --base ${BASE} --head ${OWNER}:${HEAD_BRANCH} --json url,number 2>&1 | tee -a "$PUSH_TRACE" || true)
+        pr_url=$(echo "$pr_json" | jq -r '.url // empty' 2>/dev/null || true)
+        pr_num=$(echo "$pr_json" | jq -r '.number // empty' 2>/dev/null || true)
+        if [ -n "$pr_url" ]; then
+          echo "Created PR: ${pr_url} (#${pr_num})" | tee -a "$PUSH_TRACE"
+          echo "PR_URL=${pr_url}" >> "$GITHUB_OUTPUT" || true
+          echo "PR_NUMBER=${pr_num}" >> "$GITHUB_OUTPUT" || true
+        else
+          echo "gh pr create did not return a URL — captured output above; attempting fallback via API" | tee -a "$PUSH_TRACE"
+          # fallthrough to curl-based creation below
+        fi
       fi
-      echo "PR_NUMBER=${existing_pr}" >> "$GITHUB_OUTPUT" || true
+    else
+      echo "gh not available; falling back to curl API" | tee -a "$PUSH_TRACE"
+    fi
+
+    # If we reach here and didn't record a PR, try the API (covers both gh-failure and missing gh)
+    if [ -z "${pr_url:-}" ]; then
+      echo "Attempting curl-based PR check/create (fallback)" | tee -a "$PUSH_TRACE"
+      if command -v jq >/dev/null 2>&1; then
+        existing_pr_json=$(curl -sS -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+          "https://api.github.com/repos/${OWNER}/${REPO}/pulls?head=${OWNER}:${HEAD_BRANCH}&base=${BASE}&state=open" 2>&1 | tee -a "$PUSH_TRACE" ) || true
+        existing_pr=$(echo "$existing_pr_json" | jq -r '.[0].number // empty' || true)
+      else
+        existing_pr_json=$(curl -sS -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+          "https://api.github.com/repos/${OWNER}/${REPO}/pulls?head=${OWNER}:${HEAD_BRANCH}&base=${BASE}&state=open" 2>&1 | tee -a "$PUSH_TRACE" ) || true
+        existing_pr=$(echo "$existing_pr_json" | grep -o '"number": [0-9]*' | head -1 | grep -o '[0-9]*' || true)
+      fi
+
+      if [ -n "$existing_pr" ]; then
+        echo "Found existing PR #$existing_pr — updating title/body" | tee -a "$PUSH_TRACE"
+        if command -v jq >/dev/null 2>&1; then
+          curl -sS -X PATCH -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${OWNER}/${REPO}/pulls/${existing_pr}" \
+            -d "$(jq -n --arg t "$TITLE" --arg b "$BODY" '{title:$t, body:$b}')" 2>&1 | tee -a "$PUSH_TRACE" || true
+        else
+          curl -sS -X PATCH -H "Authorization: token ${SYNC_PAT}" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${OWNER}/${REPO}/pulls/${existing_pr}" \
+            -d "{\"title\": \"${TITLE}\", \"body\": \"${BODY}\"}" 2>&1 | tee -a "$PUSH_TRACE" || true
+        fi
+        echo "PR_NUMBER=${existing_pr}" >> "$GITHUB_OUTPUT" || true
+      fi
     else
       echo "No existing PR — creating new PR ${HEAD_BRANCH} -> ${BASE}" | tee -a "$PUSH_TRACE"
       if command -v jq >/dev/null 2>&1; then
