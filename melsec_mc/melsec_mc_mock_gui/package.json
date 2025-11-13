@@ -1,0 +1,23 @@
+{
+  "name": "melsec-mock-gui-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --outfile=src/dist/main.js --platform=browser --sourcemap",
+    "test": "vitest",
+    "watch": "esbuild src/main.ts --bundle --outfile=src/dist/main.js --platform=browser --sourcemap --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/**/*.{ts,js} --ext .ts",
+    "lint:fix": "eslint src/**/*.{ts,js} --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "esbuild": "^0.25.12",
+    "eslint": "^8.45.0",
+    "jsdom": "^27.1.0",
+    "typescript": "5.3.3",
+    "vitest": "^4.0.8"
+  }
+}
