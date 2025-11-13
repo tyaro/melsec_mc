@@ -86,8 +86,9 @@ jobs:
           OUTDIR="$TMPDIR/out"
           rm -rf "$OUTDIR"
           mkdir -p "$OUTDIR"
-          git clone --no-hardlinks --dissociate . "$OUTDIR/repo_copy"
-          cd "$OUTDIR/repo_copy"
+          # create a bare clone (stable, no working-tree checkout) and tar that
+          git clone --bare . "$OUTDIR/repo_bare.git"
+          cd "$OUTDIR/repo_bare.git"
 
           OUT="${GITHUB_RUN_ID:-run}_melsec_mc_v0.4.13.tar.gz"
           tar -czf "$OUT" .
