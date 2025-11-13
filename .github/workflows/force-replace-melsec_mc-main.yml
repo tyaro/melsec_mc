@@ -45,7 +45,8 @@ jobs:
         env:
           SYNC_PAT: ${{ secrets.SYNC_PAT }}
         run: |
-          rsync -a --delete ../melsec_mc/ target/
+          # copy from repository root melsec_mc/ into target/
+          rsync -a --delete melsec_mc/ target/
           cd target
           # create main branch based on current remote/main if present
           git checkout -B main origin/main || git checkout -B main
