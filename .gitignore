@@ -1,93 +1,17 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Ignore node_modules under the GUI frontend
-melsec_mc_mock_gui/node_modules/
-
-# Ignore node_modules in any subdirectory (workspace-wide)
-**/node_modules/
-**/node_modules/**
-
-# Common OS files
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# IDE / Editor
-*.iml
-.idea/workspace.xml
-.idea/**/workspace.xml
-.vscode/*
-# keep extensions recommendation
-!.vscode/extensions.json
-
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.pytest_cache/
-.mypy_cache/
-venv/
-.venv/
-
-# Coverage and test output
-coverage/
-.nyc_output/
-
-# Build / bundler caches
-.cache/
-.parcel-cache/
-.next/
-.nuxt/
-.turbo/
-dist/
-build/
-out/
-
-# Misc
-.env
-.env.*
-*.local
-*.seed
-*.pid
+# Rust
+/target
+**/*.rs.bk
+logs/*
+/logs
 
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-target/
-# Ignore any nested Cargo target directories in workspace members
-**/target/
-**/target/**
+# VS Code
+.vscode/
 
-temp/**
+# Local release and CI artifacts
+/release_artifacts/
+/ci_artifacts_*/
 
-# Ignore CI/workflow artifacts and push-trace logs/backups created by sync runs
-/.github/artifacts/
-.github/artifacts/**
-/artifacts/
-/artifacts-*/
-/tmp_artifacts/
-
-# push-trace runtime/log and backups
-**/push-trace*
-push-trace*
+# Generated archives and checksums
+*.zip
+*.sha256
