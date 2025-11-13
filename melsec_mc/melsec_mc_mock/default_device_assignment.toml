@@ -1,0 +1,48 @@
+# default_device_assignment.toml
+#
+# Devices: simple symbol -> points mapping used by the mock server to
+# preallocate device point arrays at startup when no snapshot exists.
+# Values may be integers (absolute points) or strings like "8K" (handled
+# by the loader as *1024). The keys below follow Mitsubishi device symbols.
+#
+[devices]
+# 入力リレー X: bit
+X = 8192
+# 出力リレー Y: bit
+Y = 8192
+# 内部リレー M: bit
+M = 8192
+# ラッチリレー L: bit
+L = 8192
+# リンクリレー B: bit
+B = 8192
+# アナンシェータ F: bit
+F = 2048
+# リンク特殊リレー SB: bit
+SB = 2048
+# エッジリレー V: bit
+V = 2048
+# ステップリレー S: bit
+S = 8192
+# タイマ T: ユニット TS(bit)/TN(bit)/TC(word)
+T = 2048
+# ロングタイマ LT: ユニット LTS(bit)/LTN(bit)/LTC(word)
+LT = 2048
+# 積算タイマ ST: ユニット STS(bit)/STN(bit)/STC(word)
+ST = 0
+# ロング積算タイマ LST: ユニット LSTS(bit)/LSTN(bit)/LSTC(word)
+LST = 0
+# カウンタ C: ユニット CTS(bit)/CTN(bit)/CTC(word)
+C = 1024
+# ロングカウンタ LC: ユニット LCTS(bit)/LCTN(bit)/LCTC(word)
+LC = 1024
+# データレジスタ D: word
+D = 12288
+# リンクレジスタ W: word
+W = 8192
+# リンク特殊レジスタ SW:word
+SW = 2048
+# インデックス Z: word
+Z = 20
+# ファイルレジスタ ZR: word
+ZR = 65536
