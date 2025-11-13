@@ -68,6 +68,17 @@ jobs:
             # if branch missing, try to detach to the tag's commit
             git checkout --detach || true
           fi
+          # If branch is yet-to-be-born (no commits), find any commit and point HEAD there
+          if git rev-parse --verify --quiet HEAD >/dev/null 2>&1; then
+            : # HEAD exists
+          else
+            TIP=$(git rev-list --all -n 1 || true)
+            if [ -n "$TIP" ]; then
+              git checkout --detach "$TIP" || true
+              git branch -f main "$TIP" || true
+              git checkout main || true
+            fi
+          fi
           git --no-pager log --oneline -n 10 || true
           git repack -ad || true
 
