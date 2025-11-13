@@ -91,10 +91,10 @@ jobs:
           cd "$OUTDIR/repo_bare.git"
 
           OUT="${GITHUB_RUN_ID:-run}_melsec_mc_v0.4.13.tar.gz"
-          tar -czf "$OUT" .
-
-          # move artifact to workspace so upload-artifact can find it reliably
-          mv "$OUT" "$GITHUB_WORKSPACE/"
+          # create a git bundle (single file) to capture all refs/objects, then gzip that bundle
+          BUNDLE="$OUTDIR/${OUT%.tar.gz}.bundle"
+          git bundle create "$BUNDLE" --all
+          gzip -c "$BUNDLE" > "$GITHUB_WORKSPACE/$OUT"
           echo "artifact=$GITHUB_WORKSPACE/$OUT" > "$GITHUB_WORKSPACE/artifact.env" || true
 
       - name: Upload extracted artifact
