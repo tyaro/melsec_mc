@@ -42,6 +42,15 @@ jobs:
           cd target
           git fetch origin --prune
 
+      - name: Wipe target root (preserve .git)
+        run: |
+          # Ensure branch exists locally so we can safely clean the working tree
+          cd target
+          git checkout -B main origin/main || git checkout -B main
+          # Remove all top-level entries except .git to guarantee a clean repo root
+          find . -mindepth 1 -maxdepth 1 -not -name '.git' -exec rm -rf {} + || true
+          cd ..
+
       - name: Replace files and force-push main
         env:
           SYNC_PAT: ${{ secrets.SYNC_PAT }}
