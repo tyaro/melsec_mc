@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Verify confirmation
         run: |
@@ -57,5 +58,5 @@ jobs:
           else
             echo "No changes to commit; will still attempt force-push to ensure state." 
           fi
-          # force push to main
-          git push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" main --force
+          # force push to main (ensure SYNC_PAT is used, not GITHUB_TOKEN extraheader)
+          git -c http.extraheader= push "https://x-access-token:${SYNC_PAT}@github.com/tyaro/melsec_mc.git" main --force
