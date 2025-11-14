@@ -47,7 +47,12 @@ jobs:
           SYNC_PAT: ${{ secrets.SYNC_PAT }}
         run: |
           # copy from repository root melsec_mc/ into target/
-          rsync -a --delete melsec_mc/ target/
+          # exclude workflow files and artifact backups so target repo doesn't run copied workflows
+          rsync -a --delete \
+            --exclude='.github/workflows' \
+            --exclude='.github/artifacts' \
+            --exclude='*.bak' \
+            melsec_mc/ target/
           cd target
           # remove known artifact files that may contain secrets (avoid Push Protection)
           rm -rf .github/artifacts || true
